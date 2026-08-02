@@ -1,0 +1,139 @@
+---
+import { ArrowUpRight, ChevronDown, Menu, Package, X } from '@lucide/astro';
+import products from '../data/products.json';
+
+const path = Astro.url.pathname;
+const navItems = [
+  { href: '/', label: 'Inicio', active: path === '/' },
+  { href: '/proyectos/', label: 'Proyectos', active: path.startsWith('/proyecto') },
+  { href: '/blog/', label: 'Blog', active: path === '/blog/' || (!path.startsWith('/proyecto') && path !== '/') },
+];
+---
+
+<header class="site-header" data-site-header>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Diego Amorin, inicio">
+      <span class="brand-mark" aria-hidden="true">DA</span>
+      <span>Diego Amorin</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      {navItems.map((item) => (
+        <a href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>
+      ))}
+      <div class="product-menu" data-product-menu>
+        <button
+          class="product-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="product-panel"
+          data-product-trigger
+        >
+          Productos <ChevronDown size={15} stroke-width={1.8} aria-hidden="true" />
+        </button>
+        <div class="product-panel" id="product-panel" data-product-panel hidden>
+          <p class="product-kicker">Productos digitales</p>
+          <ul>
+            {products.map((product) => (
+              <li>
+                {product.enabled && product.url ? (
+                  <a href={product.url}>
+                    <span class="product-icon"><Package size={17} aria-hidden="true" /></span>
+                    <span>{product.name}</span>
+                    <ArrowUpRight size={15} aria-hidden="true" />
+                  </a>
+                ) : (
+                  <span class="product-disabled" aria-disabled="true">
+                    <span class="product-icon"><Package size={17} aria-hidden="true" /></span>
+                    <span>{product.name}<small>Próximamente</small></span>
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <button
+      class="mobile-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Abrir menú"
+      data-mobile-toggle
+    >
+      <Menu class="menu-open-icon" size={22} aria-hidden="true" />
+      <X class="menu-close-icon" size={22} aria-hidden="true" />
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" data-mobile-nav hidden>
+    <div class="container">
+      {navItems.map((item) => (
+        <a href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>
+      ))}
+      <details>
+        <summary>Productos <ChevronDown size={16} aria-hidden="true" /></summary>
+        <div class="mobile-products">
+          {products.map((product) =>
+            product.enabled && product.url ? (
+              <a href={product.url}>{product.name}<ArrowUpRight size={15} aria-hidden="true" /></a>
+            ) : (
+              <span aria-disabled="true">{product.name}<small>Próximamente</small></span>
+            ),
+          )}
+        </div>
+      </details>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector('[data-site-header]');
+  const productMenu = header?.querySelector('[data-product-menu]');
+  const productTrigger = header?.querySelector('[data-product-trigger]');
+  const productPanel = header?.querySelector('[data-product-panel]');
+  const mobileToggle = header?.querySelector('[data-mobile-toggle]');
+  const mobileNav = header?.querySelector('[data-mobile-nav]');
+
+  const setProductOpen = (open: boolean) => {
+    if (!(productTrigger instanceof HTMLButtonElement) || !(productPanel instanceof HTMLElement)) return;
+    productTrigger.setAttribute('aria-expanded', String(open));
+    productPanel.hidden = !open;
+  };
+
+  productTrigger?.addEventListener('click', () => {
+    setProductOpen(productTrigger.getAttribute('aria-expanded') !== 'true');
+  });
+  productMenu?.addEventListener('mouseenter', () => setProductOpen(true));
+  productMenu?.addEventListener('mouseleave', () => setProductOpen(false));
+  productMenu?.addEventListener('focusin', () => setProductOpen(true));
+  productMenu?.addEventListener('focusout', (event) => {
+    const focusEvent = event as FocusEvent;
+    if (!productMenu.contains(focusEvent.relatedTarget as Node | null)) setProductOpen(false);
+  });
+
+  const setMobileOpen = (open: boolean) => {
+    if (!(mobileToggle instanceof HTMLButtonElement) || !(mobileNav instanceof HTMLElement)) return;
+    mobileToggle.setAttribute('aria-expanded', String(open));
+    mobileToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    mobileNav.hidden = !open;
+    document.body.classList.toggle('menu-is-open', open);
+  };
+
+  mobileToggle?.addEventListener('click', () => {
+    setMobileOpen(mobileToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (productMenu && !productMenu.contains(event.target as Node)) setProductOpen(false);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setProductOpen(false);
+      setMobileOpen(false);
+      if (productTrigger instanceof HTMLButtonElement) productTrigger.focus();
+    }
+  });
+</script>

@@ -1,0 +1,93 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { ArrowLeft, Clock3 } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import aboutImage from '../assets/site/diego-about.jpg';
+import { formatDate } from '../lib/format';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+const canonical = new URL(`/${post.id}/`, Astro.site).toString();
+const imageUrl = post.data.featuredImage
+  ? new URL(post.data.featuredImage.src, Astro.site).toString()
+  : undefined;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.publishedAt.toISOString(),
+  dateModified: post.data.updatedAt.toISOString(),
+  mainEntityOfPage: canonical,
+  ...(imageUrl ? { image: imageUrl } : {}),
+  author: { '@type': 'Person', name: 'Diego Amorin', url: 'https://diegoamorin.com/' },
+};
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  canonicalPath={`/${post.id}/`}
+  image={post.data.featuredImage}
+  imageAlt={post.data.featuredImageAlt}
+  type="article"
+  publishedAt={post.data.publishedAt}
+  updatedAt={post.data.updatedAt}
+  structuredData={structuredData}
+>
+  <article>
+    <header class="article-header section">
+      <div class="article-title container-narrow">
+        <a class="back-link" href="/blog/"><ArrowLeft size={16} aria-hidden="true" /> Volver al blog</a>
+        <div class="article-categories">
+          {post.data.categories.map((category) => <span>{category}</span>)}
+        </div>
+        <h1>{post.data.title}</h1>
+        <p>{post.data.description}</p>
+        <div class="article-meta">
+          <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
+          <span><Clock3 size={15} aria-hidden="true" /> {post.data.readingTime} min de lectura</span>
+          {post.data.updatedAt > post.data.publishedAt && (
+            <span>Actualizado {formatDate(post.data.updatedAt, { day: undefined })}</span>
+          )}
+        </div>
+      </div>
+      {post.data.featuredImage && (
+        <div class="article-cover container-wide">
+          <Image
+            src={post.data.featuredImage}
+            alt={post.data.featuredImageAlt}
+            widths={[768, 1200, 1600]}
+            sizes="(min-width: 1200px) 1200px, 100vw"
+            loading="eager"
+          />
+        </div>
+      )}
+    </header>
+    <div class="article-layout container-wide">
+      <TableOfContents headings={headings} />
+      <div class="prose">
+        <Content />
+        <aside class="author-card">
+          <Image src={aboutImage} alt="Diego Amorin" width={64} height={64} loading="lazy" />
+          <div>
+            <strong>Diego Amorin</strong>
+            <p>Desarrollador web de Perú. Escribo sobre código, diseño y productos digitales.</p>
+          </div>
+          <a href="mailto:hola@diegoamorin.com">Contactar</a>
+        </aside>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

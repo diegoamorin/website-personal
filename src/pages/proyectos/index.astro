@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { sortByPublishedAt } from '../../lib/format';
+
+const projects = sortByPublishedAt(await getCollection('projects'));
+---
+
+<BaseLayout
+  title="Proyectos"
+  description="Selección de sitios web, plataformas inmobiliarias, tiendas online y productos digitales desarrollados por Diego Amorin."
+>
+  <header class="page-hero section">
+    <div class="container page-hero-grid">
+      <div>
+        <p class="eyebrow">Proyectos</p>
+        <h1>Trabajo que une<br />estrategia y ejecución.</h1>
+      </div>
+      <p>
+        Una selección de plataformas, landing pages, tiendas y productos digitales construidos
+        para resolver necesidades concretas.
+      </p>
+    </div>
+  </header>
+  <section class="section listing-section">
+    <div class="container">
+      <p class="listing-count">{projects.length.toString().padStart(2, '0')} proyectos publicados</p>
+      <div class="project-grid listing-grid">
+        {projects.map((project, index) => <ProjectCard project={project} featured={index === 0} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

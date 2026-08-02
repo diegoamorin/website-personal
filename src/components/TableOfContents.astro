@@ -1,0 +1,39 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+const visibleHeadings = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
+---
+
+{visibleHeadings.length > 0 && (
+  <>
+    <aside class="toc toc-desktop" aria-label="Índice del artículo">
+      <p>En este artículo</p>
+      <nav>
+        <ol>
+          {visibleHeadings.map((heading) => (
+            <li class:list={{ nested: heading.depth === 3 }}>
+              <a href={`#${heading.slug}`}>{heading.text}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </aside>
+    <details class="toc toc-mobile">
+      <summary>Índice del artículo</summary>
+      <nav aria-label="Índice del artículo">
+        <ol>
+          {visibleHeadings.map((heading) => (
+            <li class:list={{ nested: heading.depth === 3 }}>
+              <a href={`#${heading.slug}`}>{heading.text}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </details>
+  </>
+)}

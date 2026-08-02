@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { sortByPublishedAt } from '../../lib/format';
+
+const posts = sortByPublishedAt(await getCollection('blog'));
+---
+
+<BaseLayout
+  title="Blog"
+  description="Artículos de Diego Amorin sobre desarrollo web, diseño UX/UI, Astro, JavaScript y WordPress."
+>
+  <header class="page-hero section">
+    <div class="container page-hero-grid">
+      <div>
+        <p class="eyebrow">Blog</p>
+        <h1>Ideas que ayudan a<br />crear mejores webs.</h1>
+      </div>
+      <p>
+        Guías y notas prácticas sobre desarrollo web, UX/UI, WordPress, Astro y las decisiones
+        que hay detrás de un producto digital bien construido.
+      </p>
+    </div>
+  </header>
+  <section class="section listing-section">
+    <div class="container">
+      <p class="listing-count">{posts.length.toString().padStart(2, '0')} artículos publicados</p>
+      <div class="article-grid listing-grid">
+        {posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import { ArrowUpRight, Mail } from '@lucide/astro';
+---
+
+<footer class="site-footer">
+  <div class="container footer-cta">
+    <div>
+      <p class="eyebrow eyebrow-light">Hablemos</p>
+      <h2>Tu negocio necesita<br />una web a su medida.</h2>
+    </div>
+    <a class="button button-light" href="mailto:hola@diegoamorin.com">
+      <Mail size={18} aria-hidden="true" />
+      hola@diegoamorin.com
+      <ArrowUpRight size={17} aria-hidden="true" />
+    </a>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {new Date().getFullYear()} Diego Amorin</p>
+    <p>Diseño y desarrollo web desde Perú.</p>
+  </div>
+</footer>

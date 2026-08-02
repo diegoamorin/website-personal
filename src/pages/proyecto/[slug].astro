@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { ArrowLeft, ArrowUpRight, CircleOff } from '@lucide/astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDate } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
+---
+
+<BaseLayout
+  title={project.data.title}
+  description={project.data.summary}
+  canonicalPath={`/proyecto/${project.id}/`}
+  image={project.data.featuredImage}
+  imageAlt={project.data.featuredImageAlt}
+>
+  <article>
+    <header class="project-header section">
+      <div class="container">
+        <a class="back-link" href="/proyectos/"><ArrowLeft size={16} aria-hidden="true" /> Volver a proyectos</a>
+        <div class="project-heading-grid">
+          <div>
+            <p class="eyebrow">{project.data.category}</p>
+            <h1>{project.data.title}</h1>
+            <p class="project-summary">{project.data.summary}</p>
+          </div>
+          <dl class="project-facts">
+            <div><dt>Inicio</dt><dd>{formatDate(project.data.startedAt)}</dd></div>
+            <div><dt>Tecnologías</dt><dd>{project.data.technologies.join(', ') || 'Por completar'}</dd></div>
+            <div>
+              <dt>Proyecto</dt>
+              <dd>
+                {project.data.projectUrlStatus === 'active' && project.data.projectUrl ? (
+                  <a href={project.data.projectUrl}>Visitar web <ArrowUpRight size={15} aria-hidden="true" /></a>
+                ) : (
+                  <span class="project-offline"><CircleOff size={15} aria-hidden="true" /> Ya no está disponible</span>
+                )}
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </header>
+
+    {project.data.featuredImage && (
+      <div class="project-cover container-wide">
+        <Image
+          src={project.data.featuredImage}
+          alt={project.data.featuredImageAlt}
+          widths={[768, 1200, 1600]}
+          sizes="(min-width: 1200px) 1200px, 100vw"
+          loading="eager"
+        />
+      </div>
+    )}
+
+    <div class="project-content container-narrow prose">
+      <Content />
+    </div>
+
+    {hasRealTestimonial && (
+      <section class="project-testimonial section">
+        <div class="container-narrow">
+          <p class="eyebrow eyebrow-light">En palabras del cliente</p>
+          <blockquote>“{project.data.client.testimonial}”</blockquote>
+          <div class="project-client">
+            {project.data.client.image && (
+              <Image src={project.data.client.image} alt="" width={56} height={56} loading="lazy" />
+            )}
+            <p><strong>{project.data.client.name}</strong><span>{project.data.client.role}</span></p>
+          </div>
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

@@ -756,15 +756,6 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.home-project-grid .project-card:first-child {
-  grid-row: span 2;
-}
-
-.home-project-grid .project-card:first-child .card-media {
-  aspect-ratio: auto;
-  min-height: 540px;
-}
-
 .article-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }

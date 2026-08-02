@@ -11,7 +11,7 @@ import { brands, testimonials } from '../data/site';
 import { sortByPublishedAt } from '../lib/format';
 
 const posts = sortByPublishedAt(await getCollection('blog')).slice(0, 3);
-const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 3);
+const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
 ---
 
 <BaseLayout

@@ -1,5 +1,6 @@
 ---
 import { ArrowUpRight, ChevronDown, Menu, Package, X } from '@lucide/astro';
+import Logo from '../assets/site/logo.svg';
 import products from '../data/products.json';
 
 const path = Astro.url.pathname;
@@ -13,8 +14,7 @@ const navItems = [
 <header class="site-header" data-site-header>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="Diego Amorin, inicio">
-      <span class="brand-mark" aria-hidden="true">DA</span>
-      <span>Diego Amorin</span>
+      <Logo class="site-logo" aria-hidden="true" />
     </a>
 
     <nav class="desktop-nav" aria-label="Navegación principal">

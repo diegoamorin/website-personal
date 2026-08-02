@@ -10,12 +10,12 @@ import franklinImage from '../assets/site/testimonial-franklin.jpg';
 import luisImage from '../assets/site/testimonial-luis.png';
 
 export const brands = [
-  { name: 'GRIC Bienes Raíces', image: brandGric },
-  { name: 'Las Palmeras del Sur', image: brandPalmeras },
-  { name: 'Marketing Papaya', image: brandPapaya },
-  { name: 'Citigram', image: brandCitigram },
-  { name: 'GUO', image: brandGuo },
-  { name: 'Lifetime Coffee', image: brandLifetime },
+  { name: 'GRIC Bienes Raíces', logo: brandGric },
+  { name: 'Las Palmeras del Sur', logo: brandPalmeras },
+  { name: 'Marketing Papaya', logo: brandPapaya },
+  { name: 'Citigram', logo: brandCitigram },
+  { name: 'GUO', logo: brandGuo },
+  { name: 'Lifetime Coffee', logo: brandLifetime },
 ];
 
 export const testimonials = [

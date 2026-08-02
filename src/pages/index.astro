@@ -61,11 +61,15 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 3);
     <div class="container">
       <p id="brands-title" class="brand-label">He creado webs para marcas de distintos países</p>
       <div class="brand-grid">
-        {brands.map((brand) => (
-          <div class="brand-item">
-            <Image src={brand.image} alt={brand.name} loading="lazy" />
-          </div>
-        ))}
+        {brands.map((brand) => {
+          const BrandLogo = brand.logo;
+
+          return (
+            <div class="brand-item">
+              <BrandLogo class="brand-logo" role="img" aria-label={brand.name} />
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>

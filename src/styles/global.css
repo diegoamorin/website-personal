@@ -255,23 +255,13 @@ a {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  gap: 0.65rem;
-  font-size: 0.9rem;
-  font-weight: 620;
-  letter-spacing: -0.02em;
 }
 
-.brand-mark {
-  display: grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  border-radius: 6px;
-  background: #111;
-  color: #fff;
-  font-size: 0.68rem;
-  font-weight: 720;
-  letter-spacing: -0.03em;
+.site-logo {
+  display: block;
+  width: 100px;
+  height: 34px;
+  color: var(--foreground);
 }
 
 .desktop-nav {
@@ -625,18 +615,24 @@ a {
   border-right: 0;
 }
 
-.brand-item img {
+.brand-logo {
+  color: var(--muted-light);
   width: auto;
   max-width: 112px;
   max-height: 34px;
-  filter: grayscale(1);
-  opacity: 0.58;
-  transition: filter 180ms ease, opacity 180ms ease;
+  transition: color 180ms ease;
 }
 
-.brand-item:hover img {
-  filter: grayscale(0);
-  opacity: 1;
+.brand-logo [fill]:not([fill='none']) {
+  fill: currentColor;
+}
+
+.brand-logo [stroke]:not([stroke='none']) {
+  stroke: currentColor;
+}
+
+.brand-item:hover .brand-logo {
+  color: var(--foreground);
 }
 
 /* About */

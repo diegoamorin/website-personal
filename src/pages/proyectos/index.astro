@@ -27,7 +27,7 @@ const projects = sortByPublishedAt(await getCollection('projects'));
     <div class="container">
       <p class="listing-count">{projects.length.toString().padStart(2, '0')} proyectos publicados</p>
       <div class="project-grid listing-grid">
-        {projects.map((project, index) => <ProjectCard project={project} featured={index === 0} />)}
+        {projects.map((project) => <ProjectCard project={project} />)}
       </div>
     </div>
   </section>
@@ -90,18 +90,6 @@ const projects = sortByPublishedAt(await getCollection('projects'));
     gap: 1.25rem;
   }
 
-  .listing-grid :global(.featured) {
-    grid-column: span 2;
-  }
-
-  .project-grid.listing-grid :global(.featured) {
-    grid-column: span 2;
-  }
-
-  .project-grid.listing-grid :global(.featured .card-media) {
-    aspect-ratio: 2.1 / 1;
-  }
-
   @media (max-width: 760px) {
     .page-hero-grid {
       grid-template-columns: 1fr;
@@ -114,15 +102,6 @@ const projects = sortByPublishedAt(await getCollection('projects'));
 
     .project-grid {
       grid-template-columns: 1fr;
-    }
-
-    .project-grid.listing-grid :global(.featured) {
-      grid-column: auto;
-      grid-row: auto;
-    }
-
-    .project-grid.listing-grid :global(.featured .card-media) {
-      aspect-ratio: 16 / 10;
     }
   }
 </style>

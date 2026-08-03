@@ -27,7 +27,7 @@ const posts = sortByPublishedAt(await getCollection('blog'));
     <div class="container">
       <p class="listing-count">{posts.length.toString().padStart(2, '0')} artículos publicados</p>
       <div class="article-grid listing-grid">
-        {posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}
+        {posts.map((post, index) => <ArticleCard post={post} />)}
       </div>
     </div>
   </section>
@@ -90,32 +90,6 @@ const posts = sortByPublishedAt(await getCollection('blog'));
     gap: 1.25rem;
   }
 
-  .listing-grid :global(.featured) {
-    grid-column: span 2;
-  }
-
-  .article-grid.listing-grid :global(.featured) {
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  }
-
-  .article-grid.listing-grid :global(.featured .card-media) {
-    height: 100%;
-    border-right: 1px solid var(--border);
-    border-bottom: 0;
-  }
-
-  .article-grid.listing-grid :global(.featured .card-body) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: clamp(1.5rem, 4vw, 3rem);
-  }
-
-  .article-grid.listing-grid :global(.featured .card-body h3) {
-    font-size: clamp(1.7rem, 3vw, 2.65rem);
-  }
-
   @media (max-width: 980px) {
     .article-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -134,19 +108,6 @@ const posts = sortByPublishedAt(await getCollection('blog'));
 
     .article-grid {
       grid-template-columns: 1fr;
-    }
-
-    .article-grid.listing-grid :global(.featured) {
-      display: block;
-      grid-column: auto;
-      grid-row: auto;
-    }
-
-    .article-grid.listing-grid :global(.featured .card-media) {
-      height: auto;
-      aspect-ratio: 16 / 10;
-      border-right: 0;
-      border-bottom: 1px solid var(--border);
     }
   }
 </style>

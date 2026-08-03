@@ -25,7 +25,7 @@ const { class: className } = Astro.props;
   .prose :global(h2),
   .prose :global(h3),
   .prose :global(h4) {
-    scroll-margin-top: calc(var(--header-height) + 2rem);
+    scroll-margin-top: calc(var(--header-height) + 1rem);
     color: #111;
     font-weight: 620;
     letter-spacing: -0.04em;
@@ -79,8 +79,9 @@ const { class: className } = Astro.props;
   }
 
   .prose :global(img) {
-    width: auto;
-    max-height: none;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     margin: 2rem auto;
     border: 1px solid var(--border);
     border-radius: 9px;
@@ -165,4 +166,3 @@ const { class: className } = Astro.props;
     background: #111;
   }
 </style>
-

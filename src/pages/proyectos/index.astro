@@ -32,3 +32,97 @@ const projects = sortByPublishedAt(await getCollection('projects'));
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* Listing pages */
+  .page-hero {
+    padding-top: clamp(4rem, 10vw, 9rem);
+    border-bottom: 1px solid var(--border);
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-position: center;
+    background-size: 48px 48px;
+  }
+
+  .page-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.6fr);
+    align-items: end;
+    gap: 4rem;
+  }
+
+  .page-hero h1 {
+    margin: 0;
+    font-size: clamp(3.2rem, 7vw, 6.7rem);
+    font-weight: 600;
+    letter-spacing: -0.07em;
+    line-height: 0.93;
+  }
+
+  .page-hero-grid > p {
+    margin: 0 0 0.3rem;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .listing-section {
+    padding-top: clamp(3rem, 6vw, 5rem);
+  }
+
+  .listing-count {
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 620;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .listing-grid :global(.featured) {
+    grid-column: span 2;
+  }
+
+  .project-grid.listing-grid :global(.featured) {
+    grid-column: span 2;
+  }
+
+  .project-grid.listing-grid :global(.featured .card-media) {
+    aspect-ratio: 2.1 / 1;
+  }
+
+  @media (max-width: 760px) {
+    .page-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .page-hero-grid > p {
+      margin: 0;
+    }
+
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-grid.listing-grid :global(.featured) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .project-grid.listing-grid :global(.featured .card-media) {
+      aspect-ratio: 16 / 10;
+    }
+  }
+</style>

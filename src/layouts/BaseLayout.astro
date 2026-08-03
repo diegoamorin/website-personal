@@ -71,3 +71,22 @@ const socialImage = new URL(image.src, Astro.site);
     <Footer />
   </body>
 </html>
+
+<style>
+  .skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1000;
+    padding: 0.65rem 0.9rem;
+    transform: translateY(-150%);
+    border-radius: 6px;
+    background: #111;
+    color: #fff;
+    transition: transform 160ms ease;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+</style>

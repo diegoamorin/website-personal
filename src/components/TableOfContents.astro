@@ -37,3 +37,78 @@ const visibleHeadings = headings.filter((heading) => heading.depth >= 2 && headi
     </details>
   </>
 )}
+
+<style>
+  .toc {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .toc-desktop {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+    align-self: start;
+    max-height: calc(100svh - var(--header-height) - 4rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+
+  .toc > p,
+  .toc summary {
+    margin: 0 0 0.9rem;
+    color: #222;
+    font-weight: 620;
+  }
+
+  .toc ol {
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--border);
+    list-style: none;
+  }
+
+  .toc li a {
+    display: block;
+    padding: 0.32rem 0 0.32rem 0.9rem;
+    line-height: 1.35;
+  }
+
+  .toc li.nested a {
+    padding-left: 1.55rem;
+    font-size: 0.72rem;
+  }
+
+  .toc a:hover {
+    color: #111;
+  }
+
+  .toc-mobile {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .toc-desktop {
+      display: none;
+    }
+
+    .toc-mobile {
+      display: block;
+      margin-bottom: 2.5rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .toc-mobile summary {
+      min-height: 30px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .toc-mobile[open] nav {
+      margin-top: 0.8rem;
+    }
+  }
+</style>

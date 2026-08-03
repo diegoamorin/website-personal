@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { ArrowLeft, ArrowUpRight, CircleOff } from '@lucide/astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Prose from '../../components/Prose.astro';
 import { formatDate } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -66,9 +67,9 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
       </div>
     )}
 
-    <div class="project-content container-narrow prose">
+    <Prose class="project-content container-narrow">
       <Content />
-    </div>
+    </Prose>
 
     {hasRealTestimonial && (
       <section class="project-testimonial section">
@@ -86,3 +87,138 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
     )}
   </article>
 </BaseLayout>
+
+<style>
+  /* Project */
+  .project-header {
+    padding-top: clamp(3rem, 7vw, 6rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .project-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    align-items: end;
+    gap: clamp(3rem, 8vw, 8rem);
+  }
+
+  .project-heading-grid h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6.8rem);
+    font-weight: 610;
+    letter-spacing: -0.07em;
+    line-height: 0.94;
+  }
+
+  .project-summary {
+    max-width: 680px;
+    margin: 1.6rem 0 0;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.5vw, 1.18rem);
+  }
+
+  .project-facts {
+    margin: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .project-facts > div {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.78rem;
+  }
+
+  .project-facts dt {
+    color: var(--muted);
+  }
+
+  .project-facts dd {
+    margin: 0;
+    font-weight: 560;
+  }
+
+  .project-facts a,
+  .project-offline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .project-offline {
+    color: #858585;
+    font-weight: 470;
+  }
+
+  .project-content {
+    padding-block: clamp(4rem, 8vw, 8rem);
+  }
+
+  .project-content :global(img) {
+    max-width: min(100%, 1100px);
+  }
+
+  .project-testimonial blockquote {
+    margin: 1.5rem 0 2.5rem;
+    color: #eee;
+    font-size: clamp(1.6rem, 4vw, 3.2rem);
+    letter-spacing: -0.045em;
+    line-height: 1.25;
+  }
+
+  .project-client {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .project-client img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .project-client p,
+  .project-client strong,
+  .project-client span {
+    display: block;
+    margin: 0;
+  }
+
+  .project-client strong {
+    font-size: 0.9rem;
+  }
+
+  .project-client span {
+    margin-top: 0.15rem;
+    color: #858585;
+    font-size: 0.76rem;
+  }
+
+  .project-cover {
+    overflow: hidden;
+    margin-top: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .project-cover img {
+    width: 100%;
+    max-height: 780px;
+    object-fit: cover;
+  }
+
+  .project-testimonial {
+    background: #0a0a0a;
+    color: #fff;
+  }
+
+  @media (max-width: 760px) {
+    .project-heading-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

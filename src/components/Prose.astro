@@ -22,10 +22,10 @@ const { class: className } = Astro.props;
     margin-top: 0;
   }
 
+  /* El offset de los enlaces ancla ya se define con scroll-padding en global.css. */
   .prose :global(h2),
   .prose :global(h3),
   .prose :global(h4) {
-    scroll-margin-top: calc(var(--header-height) + 1rem);
     color: #111;
     font-weight: 620;
     letter-spacing: -0.04em;

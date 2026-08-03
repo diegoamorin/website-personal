@@ -11,25 +11,25 @@ const visibleHeadings = headings.filter((heading) => heading.depth >= 2 && headi
 
 {visibleHeadings.length > 0 && (
   <>
-    <aside class="toc toc-desktop" aria-label="Índice del artículo">
+    <aside class="toc toc-desktop" aria-label="Índice del artículo" data-toc>
       <p>En este artículo</p>
       <nav>
         <ol>
           {visibleHeadings.map((heading) => (
             <li class:list={{ nested: heading.depth === 3 }}>
-              <a href={`#${heading.slug}`}>{heading.text}</a>
+              <a href={`#${heading.slug}`} data-heading-id={heading.slug}>{heading.text}</a>
             </li>
           ))}
         </ol>
       </nav>
     </aside>
-    <details class="toc toc-mobile">
+    <details class="toc toc-mobile" data-toc>
       <summary>Índice del artículo</summary>
       <nav aria-label="Índice del artículo">
         <ol>
           {visibleHeadings.map((heading) => (
             <li class:list={{ nested: heading.depth === 3 }}>
-              <a href={`#${heading.slug}`}>{heading.text}</a>
+              <a href={`#${heading.slug}`} data-heading-id={heading.slug}>{heading.text}</a>
             </li>
           ))}
         </ol>
@@ -70,17 +70,34 @@ const visibleHeadings = headings.filter((heading) => heading.depth >= 2 && headi
 
   .toc li a {
     display: block;
-    padding: 0.32rem 0 0.32rem 0.9rem;
+    margin-left: -1px;
+    padding: 0.32rem 0.45rem 0.32rem calc(0.9rem - 1px);
+    border-left: 2px solid transparent;
     line-height: 1.35;
+    transition:
+      color 160ms ease,
+      border-color 160ms ease,
+      background-color 160ms ease;
   }
 
   .toc li.nested a {
-    padding-left: 1.55rem;
+    padding-left: calc(1.55rem - 1px);
     font-size: 0.72rem;
   }
 
   .toc a:hover {
     color: #111;
+  }
+
+  .toc li a.is-active {
+    border-left-color: var(--accent);
+    background: linear-gradient(90deg, rgba(0, 104, 214, 0.08), transparent 88%);
+    color: var(--accent);
+    font-weight: 620;
+  }
+
+  .toc li a.is-active:hover {
+    color: var(--accent);
   }
 
   .toc-mobile {
@@ -112,3 +129,93 @@ const visibleHeadings = headings.filter((heading) => heading.depth >= 2 && headi
     }
   }
 </style>
+
+<script>
+  const tocContainers = Array.from(document.querySelectorAll<HTMLElement>('[data-toc]'));
+  const tocLinks = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>('[data-toc] a[data-heading-id]'),
+  );
+
+  const headingIds = [...new Set(tocLinks.map((link) => link.dataset.headingId).filter(Boolean))] as string[];
+  const articleHeadings = headingIds
+    .map((id) => document.getElementById(id))
+    .filter((heading): heading is HTMLElement => heading !== null);
+
+  let activeHeadingId: string | null = null;
+  let animationFrame = 0;
+
+  // Desplaza solo el índice; no modifica la posición de lectura del artículo.
+  const keepDesktopLinkVisible = (activeLink: HTMLAnchorElement) => {
+    const desktopToc = activeLink.closest<HTMLElement>('.toc-desktop');
+    if (!desktopToc || desktopToc.scrollHeight <= desktopToc.clientHeight) return;
+
+    const tocRect = desktopToc.getBoundingClientRect();
+    const linkRect = activeLink.getBoundingClientRect();
+    const breathingRoom = 16;
+
+    if (linkRect.top < tocRect.top + breathingRoom) {
+      desktopToc.scrollTop -= tocRect.top + breathingRoom - linkRect.top;
+    } else if (linkRect.bottom > tocRect.bottom - breathingRoom) {
+      desktopToc.scrollTop += linkRect.bottom - (tocRect.bottom - breathingRoom);
+    }
+  };
+
+  const setActiveHeading = (headingId: string | null) => {
+    if (headingId === activeHeadingId) return;
+    activeHeadingId = headingId;
+
+    tocLinks.forEach((link) => {
+      const isActive = link.dataset.headingId === headingId;
+      link.classList.toggle('is-active', isActive);
+
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+        keepDesktopLinkVisible(link);
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  const updateActiveHeading = () => {
+    animationFrame = 0;
+    if (articleHeadings.length === 0) return;
+
+    const headerHeight = Number.parseFloat(
+      getComputedStyle(document.documentElement).getPropertyValue('--header-height'),
+    ) || 0;
+    const readingLine = headerHeight + 32;
+    let currentHeadingId: string | null = null;
+
+    // Mantiene activo únicamente el último encabezado que cruzó la línea de lectura.
+    for (const heading of articleHeadings) {
+      if (heading.getBoundingClientRect().top > readingLine) break;
+      currentHeadingId = heading.id;
+    }
+
+    const isAtPageEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    if (isAtPageEnd) currentHeadingId = articleHeadings.at(-1)?.id ?? currentHeadingId;
+
+    setActiveHeading(currentHeadingId);
+  };
+
+  const requestActiveHeadingUpdate = () => {
+    if (animationFrame) return;
+    animationFrame = window.requestAnimationFrame(updateActiveHeading);
+  };
+
+  tocContainers.forEach((toc) => {
+    toc.addEventListener('click', (event) => {
+      const link = (event.target as Element).closest<HTMLAnchorElement>('a[data-heading-id]');
+      if (!link?.dataset.headingId) return;
+
+      setActiveHeading(link.dataset.headingId);
+      if (toc instanceof HTMLDetailsElement) toc.open = false;
+    });
+  });
+
+  window.addEventListener('scroll', requestActiveHeadingUpdate, { passive: true });
+  window.addEventListener('resize', requestActiveHeadingUpdate);
+  window.addEventListener('hashchange', requestActiveHeadingUpdate);
+  updateActiveHeading();
+</script>

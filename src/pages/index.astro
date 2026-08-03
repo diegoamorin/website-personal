@@ -121,7 +121,6 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
           <!-- <p class="eyebrow eyebrow-light">Confianza</p> -->
           <h2 id="testimonials-title">Ellos confiaron en mí.</h2>
         </div>
-        <p class="section-intro">Relaciones de trabajo claras, cercanas y orientadas a resultados.</p>
       </div>
       <div class="testimonial-grid">
         {testimonials.map((testimonial) => (
@@ -380,13 +379,6 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
     margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
   }
 
-  .section-intro {
-    max-width: 340px;
-    margin: 0;
-    color: #aaa;
-    font-size: 0.92rem;
-  }
-
   .project-grid,
   .article-grid {
     display: grid;
@@ -560,10 +552,6 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
 
     .section-heading {
       align-items: flex-start;
-    }
-
-    .section-heading .section-intro {
-      display: none;
     }
 
     .home-project-grid,

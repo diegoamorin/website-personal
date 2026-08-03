@@ -140,6 +140,7 @@ const visibleHeadings = headings.filter((heading) => heading.depth >= 2 && headi
   const articleHeadings = headingIds
     .map((id) => document.getElementById(id))
     .filter((heading): heading is HTMLElement => heading !== null);
+  const articleContent = tocContainers[0]?.parentElement;
 
   let activeHeadingId: string | null = null;
   let animationFrame = 0;
@@ -185,11 +186,16 @@ const visibleHeadings = headings.filter((heading) => heading.depth >= 2 && headi
       getComputedStyle(document.documentElement).getPropertyValue('--header-height'),
     ) || 0;
     const readingLine = headerHeight + 32;
-    let currentHeadingId: string | null = null;
+    const hasReachedArticleContent =
+      !articleContent || articleContent.getBoundingClientRect().top <= readingLine;
+    let currentHeadingId: string | null = hasReachedArticleContent
+      ? articleHeadings[0]?.id ?? null
+      : null;
 
-    // Mantiene activo únicamente el último encabezado que cruzó la línea de lectura.
+    // La portada y la introducción pertenecen a la primera sección. Después,
+    // mantiene activo el último encabezado que cruzó la línea de lectura.
     for (const heading of articleHeadings) {
-      if (heading.getBoundingClientRect().top > readingLine) break;
+      if (heading.getBoundingClientRect().top > readingLine + 1) break;
       currentHeadingId = heading.id;
     }
 

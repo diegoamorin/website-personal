@@ -64,21 +64,22 @@ const structuredData = {
           )}
         </div>
       </div>
-      {post.data.featuredImage && (
-        <div class="article-cover container-wide">
-          <Image
-            src={post.data.featuredImage}
-            alt={post.data.featuredImageAlt}
-            widths={[768, 1200, 1600]}
-            sizes="(min-width: 1200px) 1200px, 100vw"
-            loading="eager"
-          />
-        </div>
-      )}
     </header>
     <div class="article-layout container-wide">
       <TableOfContents headings={headings} />
       <Prose>
+        {post.data.featuredImage && (
+          <div class="article-cover">
+            <Image
+              src={post.data.featuredImage}
+              alt={post.data.featuredImageAlt}
+              widths={[480, 768, 1200]}
+              sizes="(min-width: 980px) 720px, 100vw"
+              loading="eager"
+              data-prose-image="false"
+            />
+          </div>
+        )}
         <Content />
         <aside class="author-card">
           <Image src={aboutImage} alt="Diego Amorin" width={64} height={64} loading="lazy" />
@@ -157,16 +158,16 @@ const structuredData = {
 
   .article-cover {
     overflow: hidden;
-    margin-top: clamp(3rem, 7vw, 6rem);
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--surface);
   }
 
   .article-cover img {
+    display: block;
     width: 100%;
-    max-height: 780px;
-    object-fit: cover;
+    height: auto;
   }
 
   .article-layout {

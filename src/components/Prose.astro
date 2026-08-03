@@ -78,7 +78,7 @@ const { class: className } = Astro.props;
     text-decoration-color: currentColor;
   }
 
-  .prose :global(img) {
+  .prose :global(img:not([data-prose-image='false'])) {
     width: 100%;
     height: auto;
     max-width: 100%;

@@ -33,7 +33,6 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
         <a class="back-link" href="/proyectos/"><ArrowLeft size={16} aria-hidden="true" /> Volver a proyectos</a>
         <div class="project-heading-grid">
           <div>
-            <p class="eyebrow">{project.data.category}</p>
             <h1>{project.data.title}</h1>
             <p class="project-summary">{project.data.summary}</p>
           </div>
@@ -50,6 +49,7 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
                 )}
               </dd>
             </div>
+            <div><dt>Tipo</dt><dd>{project.data.category}</dd></div>
           </dl>
         </div>
       </div>
@@ -163,7 +163,7 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
   .project-testimonial blockquote {
     margin: 1.5rem 0 2.5rem;
     color: #eee;
-    font-size: clamp(1.6rem, 4vw, 3.2rem);
+    font-size: clamp(1.6rem, 4vw, 2rem);
     letter-spacing: -0.045em;
     line-height: 1.25;
   }

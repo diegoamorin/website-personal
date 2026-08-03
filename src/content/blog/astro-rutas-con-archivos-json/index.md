@@ -1,6 +1,6 @@
 ---
 title: 'Astro: Genera rutas o páginas con archivos JSON'
-description: En Astro puedes crear páginas automáticamente añadiendo un archivo .astro o .md dentro de la carpeta pages/. Pero, ¿qué hay de los archivos JSON? Imagina que quieres guardar datos de un portafolio y/o una lista de elemen
+description: 'Aprende a generar rutas dinámicas en Astro desde archivos JSON usando Content Collections, Zod y getStaticPaths, con una estructura escalable.'
 publishedAt: '2024-03-04T17:06:38'
 updatedAt: '2024-06-10T16:03:15'
 featuredImage: ./generate-routes-with-json-astro.jpg

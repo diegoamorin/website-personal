@@ -1,6 +1,6 @@
 ---
 title: Migrar sitio WordPress de subdominio a dominio principal
-description: Migrar un sitio de un subdominio a un dominio principal puede realizarse literalmente con unos clicks. Aún así, no estamos libres de cometer errores o que surjan problemas inesperados. Puede que el plugin de migración fa
+description: 'Aprende a migrar un sitio WordPress de un subdominio al dominio principal con Duplicator, desde el paquete hasta la instalación y las pruebas.'
 publishedAt: '2021-08-27T15:15:18'
 updatedAt: '2024-12-22T11:00:34'
 featuredImage: ./De_Subdominio_a_Dominio.jpg

@@ -1,6 +1,6 @@
 ---
 title: 'Astro: Crea un Slider de imágenes con Lightbox'
-description: Hace unos días necesitaba crear un slider de imágenes con lightbox para una Landing Page con Astro. Encontré 2 librerías de JS que me salvaron la vida y que funcionan muy bien juntas. Swiper me ayudo con los slides y Pho
+description: 'Crea en Astro un slider de imágenes responsive con lightbox usando Swiper y PhotoSwipe, desde la instalación hasta la personalización de flechas.'
 publishedAt: '2024-02-16T11:00:57'
 updatedAt: '2024-03-10T15:44:50'
 featuredImage: ./astro-create-slider-lightbox.jpg

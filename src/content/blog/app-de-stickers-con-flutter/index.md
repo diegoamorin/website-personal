@@ -1,6 +1,6 @@
 ---
 title: 'Crea una app de Stickers con Flutter #1'
-description: Hoy aprenderás a crear una aplicación de Stickers para WhatsApp usando Flutter. Te enseñaré todo lo que he aprendido al crear mis propias apps de stickers. Todo lo que leí, fallé y experimenté al publicarlo en la Play St
+description: 'Crea paso a paso la base de una app de stickers para WhatsApp con Flutter: requisitos, configuración del paquete, assets, rutas y modelos.'
 publishedAt: '2021-04-03T08:03:48'
 updatedAt: '2022-01-01T15:41:48'
 featuredImage: ./Flutter-Sticker-1-Portada.png

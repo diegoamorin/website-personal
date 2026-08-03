@@ -1,6 +1,6 @@
 ---
 title: Cómo usar Django Signals
-description: 'Para aprender a usar las señales de Django primero debemos saber cual es su función, cual es el motivo de su existencia. Por esta razón, tomaré un fragmento de la documentación que va a aclarar algunas de nuestras dudas:'
+description: 'Aprende cómo funcionan las señales de Django: emisores, receptores, señales integradas y personalizadas, decoradores y un caso con post_save.'
 publishedAt: '2022-06-21T22:15:33'
 updatedAt: '2024-12-22T10:57:23'
 featuredImage: ./Django-Signals.png

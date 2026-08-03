@@ -1,6 +1,6 @@
 ---
 title: Crear botones para compartir en redes sociales con HTML
-description: Los botones de compartir no son más que una etiqueta «a» con una URL. Esta URL posee una estructura definida por la plataforma en la que se quiere compartir. Y para que estas etiquetas <a> se parezcan a un botón, solo se
+description: 'Crea botones HTML para compartir contenido en Facebook, X, WhatsApp, Telegram, LinkedIn, Reddit y correo usando las URL de cada plataforma.'
 publishedAt: '2024-06-30T16:59:45'
 updatedAt: '2024-12-22T12:44:38'
 featuredImage: ./botones-de-compatir-en-redes-sociales.jpg

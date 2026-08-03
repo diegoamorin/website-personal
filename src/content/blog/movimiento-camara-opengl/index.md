@@ -1,6 +1,6 @@
 ---
 title: Movimiento de cámara en OpenGL (en primera persona)
-description: 'Tenía que recorrer una escena 3D en «primera persona» para mi proyecto universitario, me tomo 3 días encontrar la forma de lograrlo. Aquí te muestro una de las soluciones. En este caso usaré OpenGL con GLUT (freeGLUT en '
+description: 'Aprende a implementar movimiento de cámara en primera persona con OpenGL y GLUT: rotación, desplazamiento y conversión de coordenadas 3D.'
 publishedAt: '2023-07-18T08:51:50'
 updatedAt: '2024-02-16T12:02:51'
 featuredImage: ./opengl-manejo-camara.webp

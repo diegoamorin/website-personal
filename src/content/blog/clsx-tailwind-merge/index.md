@@ -1,6 +1,6 @@
 ---
 title: ¿Por qué usar clsx y tailwind-merge junto con Tailwind CSS?
-description: Tailwind CSS tiene muchas ventajas, pero también puede complicarnos cuando intentamos sobrescribir estilos o gestionar clases condicionales demasiado largas. ¿Te ha pasado que tus nuevos estilos no se aplican o que tu cl
+description: 'Descubre cómo combinar clsx y tailwind-merge en Tailwind CSS para gestionar clases condicionales, resolver conflictos y crear una función cn().'
 publishedAt: '2024-12-06T19:54:40'
 updatedAt: '2024-12-20T19:10:22'
 featuredImage: ./thumb-cn-tailwind.jpg

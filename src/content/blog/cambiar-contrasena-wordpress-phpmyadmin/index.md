@@ -1,6 +1,6 @@
 ---
 title: Cambiar contraseña de WordPress desde phpMyAdmin
-description: Aprenderás a cambiar la contraseña de una cuenta de WordPress por medio de phpMyAdmin. También veremos la mejor forma de encriptar la contraseña para protegerla de ataques. Paso 1. Dirígete a tu phpMyAdmin En tu panel de
+description: 'Aprende a cambiar la contraseña de WordPress desde phpMyAdmin, localizar el usuario correcto y guardar una nueva clave cifrada con MD5.'
 publishedAt: '2023-11-25T17:42:56'
 updatedAt: '2024-12-04T07:50:11'
 featuredImageAlt: ''

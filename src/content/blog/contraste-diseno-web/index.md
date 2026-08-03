@@ -1,6 +1,6 @@
 ---
 title: 'Contraste en el diseño web: guía la atención de los usuarios'
-description: 'En un mundo donde todos luchan por obtener atención, necesitas crear diseños que mantengan a los usuarios pegados a la pantalla. No queremos aburrirlos, y que luego no quieran volver nunca más. Aquí viene al rescate, el '
+description: 'Aprende a aplicar contraste de tamaño, color, forma y espaciado en diseño web para crear jerarquía visual y dirigir la atención del usuario.'
 publishedAt: '2023-04-19T00:38:15'
 updatedAt: '2023-11-17T08:09:03'
 featuredImage: ./contraste-diseno-web.png

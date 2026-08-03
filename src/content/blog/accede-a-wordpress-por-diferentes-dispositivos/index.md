@@ -1,6 +1,6 @@
 ---
 title: Accede a tu sitio WordPress local por diferentes dispositivos
-description: Cuando creamos un sitio web WordPress de forma local, a veces nos mata la curiosidad de saber como se vería en un celular o tablet real. Y es normal, porque queremos estar seguros de que todo esta correcto antes de mostr
+description: 'Aprende a acceder a tu sitio WordPress local desde un celular, tablet u otra computadora conectada a la misma red mediante la IP de tu equipo.'
 publishedAt: '2021-05-30T13:09:55'
 updatedAt: '2023-12-12T15:52:44'
 featuredImage: ./localhost-wordpress-thumb.png

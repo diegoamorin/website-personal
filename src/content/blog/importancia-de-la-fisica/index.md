@@ -1,6 +1,6 @@
 ---
 title: La importancia de la física (en la vida, la ingeniería y el emprendimiento)
-description: 'La computadora o celular que tienes en frente, ¿cómo fue creado? Cómo un trozo de materia puede sacar cálculos más rápido que tú, cómo puede guardar gigabytes de información: tus músicas, tus fotos y tus videos educativo'
+description: 'Descubre por qué la física es importante en la vida cotidiana, la ingeniería y el emprendimiento, con ejemplos, conceptos y recursos para aprender.'
 publishedAt: '2022-12-31T20:57:10'
 updatedAt: '2023-08-10T17:22:53'
 featuredImage: ./Importancia-de-la-fisica-fb.png

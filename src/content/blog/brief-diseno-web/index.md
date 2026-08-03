@@ -1,6 +1,6 @@
 ---
 title: Crea un brief para diseño web (incluye plantillas)
-description: El brief es un documento que nos ayuda a entender la necesidad del cliente y lo que esta buscando. Este documento será necesario que lo redactes antes de iniciar un diseño web. Además, la información del brief también no
+description: 'Aprende a crear un brief de diseño web o landing page con las preguntas clave, un ejemplo práctico y plantillas gratuitas para tus proyectos.'
 publishedAt: '2023-09-15T22:51:42'
 updatedAt: '2023-09-16T11:45:47'
 featuredImage: ./brief-diseno-web.png

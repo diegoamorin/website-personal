@@ -1,6 +1,6 @@
 ---
 title: Navegación Transparente con Elementor
-description: 'En esta guía rápida aprenderás como crear una navegación transparente en Elementor y posteriormente verás como cambiar el fondo de la navegación al hacer scroll. Antes de iniciar es recomendable que tengas conocimientos '
+description: 'Crea una navegación transparente con Elementor y haz que cambie de color al desplazarte usando el Theme Builder y CSS personalizado.'
 publishedAt: '2022-01-29T15:18:58'
 updatedAt: '2022-07-15T05:51:47'
 featuredImage: ./ElementorTutorial.png

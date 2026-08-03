@@ -1,6 +1,6 @@
 ---
 title: Crea un acordeón con HTML, CSS y Javascript
-description: Aprende a crear un acordeón que se expande dinámicamente con el contenido. Para este caso se realizará una sección «preguntas frecuentes». Puedes seguir esta guía también en YouTube. See the Pen SHOT – Accordeon HTML, CS
+description: 'Aprende a crear un acordeón de preguntas frecuentes con HTML, CSS y JavaScript, contenido dinámico y una animación de apertura suave.'
 publishedAt: '2023-12-01T16:15:14'
 updatedAt: '2024-03-10T15:39:53'
 featuredImage: ./Acordeon-con-HTML-y-JS.jpg

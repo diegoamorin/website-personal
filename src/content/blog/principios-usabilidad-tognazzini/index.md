@@ -1,6 +1,6 @@
 ---
 title: 19 principios de usabilidad de Bruce Tognazzini (actualizado)
-description: Los siguientes principios te ayudarán a implementar interfaces efectivas, y mejorarás la UI/UX de tus aplicaciones de escritorio, web, celular y cualquier otro dispositivo de Internet. Anteriormente las heurísticas de To
+description: 'Conoce los 19 principios de usabilidad de Bruce Tognazzini, explicados con ejemplos para diseñar interfaces más claras, eficientes y accesibles.'
 publishedAt: '2022-09-28T22:55:22'
 updatedAt: '2024-12-22T10:18:24'
 featuredImage: ./heuristicas-bruce-tognazzini-1.png

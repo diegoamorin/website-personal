@@ -1,6 +1,6 @@
 ---
 title: Guía completa de Flexbox CSS (Ilustrado)
-description: Conceptos básicos Flexbox es un sistema de diseño en CSS que extiende el flujo tradicional de bloques o en línea, introduciendo direcciones de flujo flexible. Este modelo se basa en un contenedor flexible (flex container
+description: 'Domina Flexbox CSS con esta guía ilustrada: ejes, propiedades del contenedor y elementos, alineación, tamaños flexibles y accesibilidad.'
 publishedAt: '2024-12-30T14:00:54'
 updatedAt: '2025-01-14T18:55:10'
 featuredImage: ./flexbox-css-new.png

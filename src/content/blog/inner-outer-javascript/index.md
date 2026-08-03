@@ -1,6 +1,6 @@
 ---
 title: Diferencia entre innerHTML, outerHTML, innerText y outerText en Javascript
-description: Las siguientes propiedades sirven para seleccionar y/o reemplazar un elemento HTML o su contenido. Selecciona elementos internos Las propiedades innerHTML y innerText sirven para seleccionar o reemplazar el CONTENIDO INT
+description: 'Compara innerHTML, outerHTML, innerText y outerText en JavaScript, entiende qué selecciona cada propiedad y cuándo usarla de forma segura.'
 publishedAt: '2023-11-09T18:14:15'
 updatedAt: '2024-12-22T15:28:55'
 featuredImageAlt: ''

@@ -1,6 +1,6 @@
 ---
 title: Ordenamiento por Selección en Python
-description: El ordenamiento por selección es un algoritmo que te permite ordenar los valores de una lista, y tiene una complejidad de O(n^2). Y también, cabe señalar que es más eficiente que el ordenamiento burbuja porque realiza in
+description: 'Aprende cómo funciona el ordenamiento por selección e impleméntalo en Python paso a paso, con ejemplos visuales, código y análisis del algoritmo.'
 publishedAt: '2022-08-15T11:25:16'
 updatedAt: '2024-06-30T17:46:11'
 featuredImage: ./ordenamiento-seleccion-python.png

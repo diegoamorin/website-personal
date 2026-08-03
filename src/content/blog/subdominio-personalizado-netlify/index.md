@@ -1,6 +1,6 @@
 ---
 title: Agrega un subdominio personalizado a Netlify
-description: Netlify te provee un subdominio gratuito (<algo-random>.netlify.app), pero puedes cambiar esto con tu propio subdominio (miapp.midominio.com). Esta guía te ayudará si tu dominio lo compraste en un servicio externo a Netl
+description: 'Aprende a conectar un subdominio personalizado a un proyecto de Netlify mediante DNS, aunque tu dominio esté registrado con otro proveedor.'
 publishedAt: '2024-02-19T12:21:42'
 updatedAt: '2024-02-29T15:04:50'
 featuredImageAlt: ''

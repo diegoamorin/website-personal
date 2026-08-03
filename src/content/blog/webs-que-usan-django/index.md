@@ -1,6 +1,6 @@
 ---
 title: 12 Webs famosas que han sido creadas con Django
-description: En este artículo te mostraré las aplicaciones web más populares creadas con el framework Django. Para asegurarme de que estas aplicaciones estén usando Django en la actualidad, tuve que leer los artículos del equipo de i
+description: 'Descubre 12 sitios y aplicaciones famosas creadas con Django, como Instagram, Udemy, Platzi, Mozilla, Disqus, DoorDash y Coursera.'
 publishedAt: '2022-08-26T11:56:37'
 updatedAt: '2024-07-27T17:26:21'
 featuredImage: ./webs-creados-con-django.png

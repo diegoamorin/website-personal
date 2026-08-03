@@ -1,6 +1,6 @@
 ---
 title: Agregar fuentes personalizadas en CSS con @font-face
-description: 'Cuando quieres cambiar la fuente tipográfica de tu sitio web, puedes utilizar todas las fuentes que están instaladas en tu PC. Pruébalo tu mismo, yo tengo instalado la familia de fuentes Poppins y puedo usarla en mi web:'
+description: 'Aprende a usar @font-face para agregar fuentes personalizadas en CSS, elegir formatos web y cargar una familia tipográfica completa desde tu servidor.'
 publishedAt: '2023-12-26T14:07:21'
 updatedAt: '2024-03-10T15:14:00'
 featuredImage: ./font-face-custom-fonts.jpg

@@ -1,6 +1,6 @@
 ---
 title: 10 principios de usabilidad de Jakob Nielsen (con ejemplos)
-description: Las también denominadas «Heurísticas de Jakob Nielsen» son 10 reglas pre-existentes que sirven para resolver los problemas de usabilidad más comunes en las interfaces web. De esta manera, la interfaz puede ofrecer una me
+description: 'Conoce las 10 heurísticas de usabilidad de Jakob Nielsen con ejemplos prácticos para diseñar interfaces web más claras, eficientes y fáciles de usar.'
 publishedAt: '2022-02-07T08:27:22'
 updatedAt: '2024-02-03T19:48:54'
 featuredImage: ./heuristicas-de-jakob-nielsen-1.png

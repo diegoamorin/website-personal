@@ -1,6 +1,6 @@
 ---
 title: Como crear Context Processors en Django
-description: El contexto es un «conjunto de variables» que envías a tus templates a través de las vistas. Estas variables solo pueden ser accedidas por un template específico. Pero, que sucede si nuestro proyecto requiere variables q
+description: 'Aprende qué son los context processors de Django y cómo crear uno para compartir variables globales entre múltiples templates de tu proyecto.'
 publishedAt: '2022-07-16T21:06:22'
 updatedAt: '2023-08-10T17:45:48'
 featuredImageAlt: ''

@@ -1,6 +1,6 @@
 ---
 title: 6 beneficios de tener un sitio web inmobiliario
-description: Los sitios web mejoran la presencia de una marca en Internet, porque son una buena fuente de información para las personas que desean conocer más sobre de ti o sobre tu empresa. Conocerán mas sobre tus servicios, tus pro
+description: 'Descubre 6 beneficios de un sitio web inmobiliario: comunicar tu propuesta de valor, generar confianza, captar clientes y depender menos de portales.'
 publishedAt: '2022-03-02T23:48:19'
 updatedAt: '2023-12-11T07:01:48'
 featuredImage: ./Beneficios-de-una-web-inmobiliaria.png

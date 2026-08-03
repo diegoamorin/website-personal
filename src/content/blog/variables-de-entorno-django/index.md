@@ -1,6 +1,6 @@
 ---
 title: Cómo configurar variables de entorno en Django
-description: Recuerda que cada aplicación web que desarrolles, probablemente se va a ejecutar en mas de un entorno (tanto locales, como en producción). Y necesitarás cambiar algunos parámetros para que funcione correctamente. Por eje
+description: 'Aprende a configurar variables de entorno en Django con Python Decouple, convertir tipos de datos y proteger claves y ajustes entre entornos.'
 publishedAt: '2022-07-19T18:01:11'
 updatedAt: '2023-08-10T17:45:01'
 featuredImage: ./django-variables.png

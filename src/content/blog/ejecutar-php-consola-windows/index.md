@@ -1,6 +1,6 @@
 ---
 title: Ejecutar PHP desde la consola de Windows
-description: 'Personalmente ejecuto archivos de PHP en la consola para probar algunas funciones del lenguaje, o para afinar mis habilidades. Este es el proceso que sigo: Paso 1: Instalar XAMPP Si ya tienes instalado el XAMPP, puedes s'
+description: 'Configura PHP en el PATH de Windows con XAMPP y aprende a ejecutar scripts PHP directamente desde CMD o PowerShell paso a paso.'
 publishedAt: '2023-11-25T15:24:43'
 updatedAt: '2023-11-25T15:30:15'
 featuredImageAlt: ''

@@ -1,6 +1,6 @@
 ---
 title: 6 consejos para prevenir los dolores de espalda (para programadores)
-description: El problema de nosotros los programadores es que pasamos casi todo el tiempo sentados. Nuestro trabajo es sentado. Para aprender una nueva tecnología, necesitamos estar sentados. No aprendemos React o Flutter desde el ce
+description: 'Revisa 6 hábitos ergonómicos para prevenir el dolor de espalda al programar: ajustar pantalla y silla, cuidar la postura, hacer pausas y relajarte.'
 publishedAt: '2022-08-02T21:42:09'
 updatedAt: '2023-08-10T17:41:58'
 featuredImage: ./Programador.jpg

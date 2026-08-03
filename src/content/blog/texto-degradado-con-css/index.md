@@ -1,6 +1,6 @@
 ---
 title: Cómo hacer texto degradado con CSS
-description: 'Paso 1: Agregar un degradado de fondo Selecciona tu elemento de texto (en mi caso es un H1), y agrégale un fondo degradado de esta forma: Si quieres personalizar estos degradados ve a la documentación de mozilla sobre de'
+description: 'Aprende a crear texto con degradado en CSS usando background-clip y color transparente, con una solución para gradientes horizontales.'
 publishedAt: '2024-05-11T10:18:25'
 updatedAt: '2024-12-22T10:42:19'
 featuredImageAlt: ''

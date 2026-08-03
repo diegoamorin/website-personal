@@ -1,6 +1,6 @@
 ---
 title: Cómo usar Django Messages Framework
-description: Para mejorar la experiencia de usuario (UX) en nuestra web, debemos mantener a nuestros usuarios informados acerca de lo que esta sucediendo en el sistema. Cuando agregamos, eliminamos o actualizamos un elemento o realiz
+description: 'Aprende a configurar Django Messages Framework, crear distintos niveles de mensajes y mostrarlos con Bootstrap 5 o estilos personalizados.'
 publishedAt: '2022-05-19T15:43:17'
 updatedAt: '2023-08-10T17:50:07'
 featuredImage: ./Django-Messages-Framework.png

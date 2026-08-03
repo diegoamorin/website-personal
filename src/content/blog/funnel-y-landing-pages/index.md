@@ -1,6 +1,6 @@
 ---
 title: La diferencia entre los Embudos de Ventas y las Landing Pages
-description: La Landing Page es una página web que tiene el objetivo de persuadir a las personas para que realicen una acción. En cambio, el Embudo de Ventas es un proceso que recorre una persona, desde su primer contacto con una mar
+description: 'Conoce la diferencia entre una landing page y un embudo de ventas, cómo trabajan juntos y cómo aplicarlos en distintos procesos de conversión.'
 publishedAt: '2021-09-30T19:38:20'
 updatedAt: '2024-12-22T14:35:59'
 featuredImage: ./thumbnail-landingpage-sales-funnel.jpg

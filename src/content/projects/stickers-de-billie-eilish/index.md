@@ -3,13 +3,14 @@ title: Stickers de Billie Eilish
 summary: Este proyecto fue un emprendimiento personal, desarrollé una app similar a esta anteriormente y repliqué lo mismo pero para la artista Billie Eilish.
 publishedAt: '2022-12-16T21:36:52'
 updatedAt: '2024-04-17T23:24:49'
-startedAt: '2022-12-16'
+startedAt: '2020-12-01'
 category: Aplicación móvil
 technologies:
   - Flutter
   - Photoshop
 featuredImage: ./thumb-billie-eilish.jpg
 featuredImageAlt: Stickers de Billie Eilish
+projectUrl: https://play.google.com/store/apps/details?id=com.grafipy.billie.billiestickers
 projectUrlStatus: inactive
 sourceUrl: https://diegoamorin.com/proyectos/stickers-de-billie-eilish/
 client:

@@ -13,7 +13,7 @@ technologies:
 featuredImage: ./thumb-marketing-papaya-google-ads.png
 featuredImageAlt: Marketing Papaya – Google Ads
 projectUrl: https://evolucionaagenciadigital.com/
-projectUrlStatus: active
+projectUrlStatus: inactive
 sourceUrl: https://diegoamorin.com/proyectos/marketing-papaya-google-ads/
 client:
   name: Ani Guevara

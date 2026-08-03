@@ -11,6 +11,7 @@ technologies:
   - Photoshop
 featuredImage: ./thumb-millie-bobby.jpg
 featuredImageAlt: Stickers de Millie Bobby Brown
+projectUrl: https://play.google.com/store/apps/details?id=com.grafipy.stix
 projectUrlStatus: inactive
 sourceUrl: https://diegoamorin.com/proyectos/stickers-de-millie-bobby/
 client:

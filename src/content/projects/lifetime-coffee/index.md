@@ -12,7 +12,7 @@ technologies:
 featuredImage: ./thumb-lifetimecoffee.jpg
 featuredImageAlt: Lifetime Coffee
 projectUrl: https://lifetimecoffee.pe/
-projectUrlStatus: active
+projectUrlStatus: inactive
 sourceUrl: https://diegoamorin.com/proyectos/lifetime-coffee/
 client:
   name: Franklin Vargas

@@ -11,7 +11,8 @@ technologies:
   - Tailwind
 featuredImage: ./landing-page-citigram-thumb.jpg
 featuredImageAlt: Citigram – Landing Pages
-projectUrlStatus: inactive
+projectUrl: https://citigram.vercel.app/miraflores-casa-atahualpa/
+projectUrlStatus: active
 sourceUrl: https://diegoamorin.com/proyectos/citigram-landing-pages/
 client:
   name: Luis Pino

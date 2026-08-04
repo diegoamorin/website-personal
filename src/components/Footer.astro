@@ -65,14 +65,23 @@ import { ArrowUpRight, Mail } from '@lucide/astro';
     .footer-cta {
       align-items: flex-start;
       flex-direction: column;
+      gap: 2rem;
     }
   }
 
   @media (max-width: 520px) {
+    .footer-cta h2 {
+      font-size: clamp(2.2rem, 11vw, 3rem);
+    }
+
+    .footer-cta .button {
+      width: 100%;
+    }
+
     .footer-bottom {
       align-items: flex-start;
       flex-direction: column;
-      gap: 0.35rem;
+      gap: 0.5rem;
     }
   }
 </style>

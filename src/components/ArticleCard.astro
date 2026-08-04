@@ -138,4 +138,17 @@ const { post, featured = false } = Astro.props;
     position: relative;
     z-index: 2;
   }
+
+  @media (max-width: 520px) {
+    .card-body {
+      padding: 1.15rem;
+    }
+  }
+
+  @media (hover: none) {
+    .content-card:hover {
+      box-shadow: none;
+      transform: none;
+    }
+  }
 </style>

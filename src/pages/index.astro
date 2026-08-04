@@ -526,7 +526,7 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
     }
 
     .hero-visual {
-      min-height: 520px;
+      min-height: clamp(370px, 112vw, 500px);
     }
 
     .hero-image-frame {
@@ -549,6 +549,11 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
 
     .about-visual {
       width: min(100%, 520px);
+    }
+
+    .image-note {
+      right: 0.75rem;
+      bottom: 0.75rem;
     }
 
     .section-heading {
@@ -582,6 +587,30 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
   }
 
   @media (max-width: 520px) {
+    .hero {
+      padding-top: 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 15vw, 4.25rem);
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .hero-actions .button {
+      width: 100%;
+    }
+
+    .hero-visual {
+      min-height: clamp(340px, 108vw, 430px);
+    }
+
+    .hero-image-frame {
+      width: min(92%, 430px);
+    }
+
     .brand-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -606,6 +635,11 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
 
     .section-heading > .text-link {
       margin-top: 1.25rem;
+    }
+
+    .testimonial-card {
+      min-height: 280px;
+      padding: 1.35rem;
     }
   }
 </style>

@@ -27,7 +27,7 @@ const posts = sortByPublishedAt(await getCollection('blog'));
     <div class="container">
       <p class="listing-count">{posts.length.toString().padStart(2, '0')} artículos publicados</p>
       <div class="article-grid listing-grid">
-        {posts.map((post, index) => <ArticleCard post={post} />)}
+        {posts.map((post) => <ArticleCard post={post} />)}
       </div>
     </div>
   </section>
@@ -108,6 +108,20 @@ const posts = sortByPublishedAt(await getCollection('blog'));
 
     .article-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .page-hero h1 {
+      font-size: clamp(2.8rem, 14vw, 4rem);
+    }
+
+    .page-hero-grid {
+      gap: 2rem;
+    }
+
+    .page-hero-grid > p {
+      padding: 1rem;
     }
   }
 </style>

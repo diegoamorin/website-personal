@@ -218,13 +218,27 @@ a {
 @media (max-width: 760px) {
   :root {
     --header-height: 64px;
-    --section-space: 5.25rem;
+    --section-space: 4.75rem;
   }
 
   .container,
   .container-wide,
   .container-narrow {
     width: min(calc(100% - 2rem), var(--container));
+  }
+}
+
+@media (max-width: 520px) {
+  .container,
+  .container-wide,
+  .container-narrow {
+    width: min(calc(100% - 1.5rem), var(--container));
+  }
+}
+
+@media (hover: none) {
+  .button:hover {
+    transform: none;
   }
 }
 

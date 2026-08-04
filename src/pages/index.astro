@@ -86,15 +86,17 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
       <div class="about-copy">
         <!-- <p class="eyebrow">Sobre mí</p> -->
         <h2>Más de 5 años de experiencia</h2>
-        <p class="lead">
-          Soy Diego Amorin, desarrollador web de Perú. Colaboro con marcas de España, Perú,
-          México y Chile para convertir ideas y necesidades de negocio en productos digitales claros.
-        </p>
-        <p>
-          Cuento con más de 5 años de experiencia creando sitios con WordPress, Astro, Next.js y
-          NestJS. Me interesa que cada decisión visual y técnica tenga una razón: comunicar mejor,
-          cargar rápido y facilitar el siguiente paso del usuario.
-        </p>
+        <div>
+          <p class="lead">
+            Soy Diego Amorin, desarrollador web de Perú. Colaboro con marcas de España, Perú,
+            México y Chile para convertir ideas y necesidades de negocio en productos digitales claros.
+          </p>
+          <p class="lead">
+            Cuento con más de 5 años de experiencia creando sitios con WordPress, Astro, Next.js y
+            NestJS. Me interesa que cada decisión visual y técnica tenga una razón: comunicar mejor,
+            cargar rápido y facilitar el siguiente paso del usuario.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -357,9 +359,8 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
   }
 
   .about-copy .lead {
-    margin: 2rem 0 1rem;
-    color: #2d2d2d;
-    font-size: clamp(1.1rem, 1.8vw, 1.32rem);
+    color: #4e4e4e;
+    font-size: clamp(1.05rem, 1.6vw, 1.28rem);
     letter-spacing: -0.025em;
     line-height: 1.5;
   }

@@ -1,6 +1,6 @@
 ---
 title: Marketing Papaya – Google Ads
-summary: Marketing Papaya requería de una Landing Page para vender sus servicios de Google Ads, ya que era el servicio con menos demanda. Agradezco a la CEO, Ani Guevara, por darme la oportunidad de trabajar con ellos en este proyecto.
+description: Diseño y desarrollo de una landing page para Marketing Papaya, enfocada en captar clientes para Google Ads mediante un formulario avanzado y responsive.
 publishedAt: '2024-01-16T17:05:32'
 updatedAt: '2026-08-02T10:56:01'
 startedAt: '2023-12-29'
@@ -21,6 +21,8 @@ client:
   image: ./cliente.jpg
   testimonial: Recientemente, tuve la oportunidad de trabajar con Diego para el diseño de mi landing page y quedé completamente satisfecha con los resultados. Diego demostró un alto nivel de profesionalismo y creatividad en su trabajo. Su habilidad para capturar exactamente lo que necesitaba y darle vida a mis ideas fue impresionante. Además, su atención al detalle y su compromiso con la calidad son dignos de elogio. Sin duda, recomiendo a Diego a cualquiera que busque servicios de diseño web de alta calidad. Su talento y dedicación son evidentes en cada aspecto de su trabajo.
 ---
+
+Marketing Papaya requería de una Landing Page para vender sus servicios de Google Ads, ya que era el servicio con menos demanda. Agradezco a la CEO, Ani Guevara, por darme la oportunidad de trabajar con ellos en este proyecto.
 
 ## Prototipado de Landing Page
 

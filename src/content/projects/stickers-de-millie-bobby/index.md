@@ -1,6 +1,6 @@
 ---
 title: Stickers de Millie Bobby Brown
-summary: Los stickers de Millie cuentan con más de 50,000 descargas en la PlayStore. Inicialmente se planteó hacer una app que albergue miles de stickers, pero al final se pivoto a una app para un nicho de mercado específico, desde ese momento las descargas superaron +150 al día.
+description: Diseño y desarrollo en Flutter de una app de stickers de Millie Bobby Brown para WhatsApp, con más de 50 000 descargas en Google Play Store.
 publishedAt: '2022-12-16T21:35:20'
 updatedAt: '2024-04-17T23:25:07'
 startedAt: '2020-10-17'
@@ -19,6 +19,8 @@ client:
   role: Cargo o empresa
   testimonial: Añade aquí el testimonio del cliente relacionado con este proyecto.
 ---
+
+Los stickers de Millie cuentan con más de 50,000 descargas en la PlayStore. Inicialmente se planteó hacer una app que albergue miles de stickers, pero al final se pivoto a una app para un nicho de mercado específico, desde ese momento las descargas superaron +150 al día.
 
 ## Interfaz
 

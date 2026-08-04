@@ -1,6 +1,6 @@
 ---
 title: Lifetime Coffee
-summary: El dueño de LifeTime Coffee quería que su negocio de café no se limite a un solo lugar, entonces me contacto para construirle un e-commerce, y de esta forma, exponer sus productos en Internet.
+description: Diseño y desarrollo de la tienda online de Lifetime Coffee con WooCommerce, catálogo de cafés, filtros personalizados, fichas de producto y pasarela de pago.
 publishedAt: '2023-12-30T09:48:23'
 updatedAt: '2024-07-04T11:50:10'
 startedAt: '2023-08-14'
@@ -20,6 +20,8 @@ client:
   image: ./cliente.jpg
   testimonial: Diego creó mi página web con mucha organización y profesionalismo. Escuchó mis necesidades, adaptó su trabajo a mis ideas y desarrolló un diseño y código de alta calidad. Lo recomiendo para cualquier proyecto web.
 ---
+
+El dueño de LifeTime Coffee quería que su negocio de café no se limite a un solo lugar, entonces me contacto para construirle un e-commerce, y de esta forma, exponer sus productos en Internet.
 
 ## Página de inicio
 

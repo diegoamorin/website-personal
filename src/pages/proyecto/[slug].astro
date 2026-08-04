@@ -22,7 +22,7 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
 
 <BaseLayout
   title={project.data.title}
-  description={project.data.summary}
+  description={project.data.description}
   canonicalPath={`/proyecto/${project.id}/`}
   image={project.data.featuredImage}
   imageAlt={project.data.featuredImageAlt}
@@ -33,7 +33,7 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
         <a class="back-link" href="/proyectos/"><ArrowLeft size={16} aria-hidden="true" /> Volver a proyectos</a>
         <div class="project-heading">
           <h1>{project.data.title}</h1>
-          <p class="project-summary">{project.data.summary}</p>
+          <p class="project-description">{project.data.description}</p>
         </div>
       </div>
     </header>
@@ -108,7 +108,7 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
     line-height: 0.98;
   }
 
-  .project-summary {
+  .project-description {
     max-width: 680px;
     margin: 1.6rem 0 0;
     color: var(--muted);

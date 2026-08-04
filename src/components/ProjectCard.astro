@@ -28,7 +28,7 @@ const { project, featured = false } = Astro.props;
   <div class="card-body">
     <p class="card-kicker">{project.data.category}</p>
     <h3><a href={`/proyecto/${project.id}/`}>{project.data.title}</a></h3>
-    <p>{project.data.summary}</p>
+    <p>{project.data.description}</p>
     <a class="text-link" href={`/proyecto/${project.id}/`}>Ver proyecto <ArrowUpRight size={16} aria-hidden="true" /></a>
   </div>
 </article>

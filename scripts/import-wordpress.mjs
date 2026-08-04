@@ -509,7 +509,7 @@ async function writeProject(entry) {
   const categories = termsFor(entry, 'categorias');
   const data = {
     title: cleanText(entry.title.rendered),
-    summary: cleanText(entry.excerpt.rendered),
+    description: cleanText(entry.excerpt.rendered),
     publishedAt: entry.date,
     updatedAt: entry.modified,
     startedAt: scraped.startedAt || entry.date.slice(0, 10),

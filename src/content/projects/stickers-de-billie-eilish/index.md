@@ -1,6 +1,6 @@
 ---
 title: Stickers de Billie Eilish
-summary: Este proyecto fue un emprendimiento personal, desarrollé una app similar a esta anteriormente y repliqué lo mismo pero para la artista Billie Eilish.
+description: Desarrollo de una aplicación móvil de stickers de Billie Eilish para WhatsApp con Flutter, organizada en paquetes temáticos fáciles de instalar y compartir.
 publishedAt: '2022-12-16T21:36:52'
 updatedAt: '2024-04-17T23:24:49'
 startedAt: '2020-12-01'
@@ -18,6 +18,8 @@ client:
   role: Cargo o empresa
   testimonial: Añade aquí el testimonio del cliente relacionado con este proyecto.
 ---
+
+Este proyecto fue un emprendimiento personal, desarrollé una app similar a esta anteriormente y repliqué lo mismo pero para la artista Billie Eilish.
 
 ## Interfaz
 

@@ -1,6 +1,6 @@
 ---
 title: Citigram Perú
-summary: Citigram.pe es una plataforma que te permite encontrar departamentos y casas en Lima – Perú. Luis Pino, su principal representante, me ofreció la oportunidad de trabajar en la versión inicial de la web.
+description: Diseño y desarrollo de Citigram, plataforma inmobiliaria en WordPress para buscar propiedades en Lima, con filtros, fichas de inmuebles y PDF dinámicos.
 publishedAt: '2022-12-16T21:45:27'
 updatedAt: '2024-07-04T11:51:18'
 startedAt: '2022-10-07'
@@ -19,6 +19,8 @@ client:
   role: Cargo o empresa
   testimonial: Añade aquí el testimonio del cliente relacionado con este proyecto.
 ---
+
+Citigram.pe es una plataforma que te permite encontrar departamentos y casas en Lima – Perú. Luis Pino, su principal representante, me ofreció la oportunidad de trabajar en la versión inicial de la web.
 
 ## Página de inicio
 

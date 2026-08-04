@@ -50,10 +50,8 @@ const structuredData = {
       <TableOfContents headings={headings} />
       <div class="article-main">
         <h1>{post.data.title}</h1>
-        <div class="article-categories">
-          {post.data.categories.map((category) => <span>{category}</span>)}
-        </div>
         <div class="article-meta">
+          {post.data.categories.map((category) => <span class="article-category">{category}</span>)}
           <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
           {post.data.updatedAt > post.data.publishedAt && (
             <span>Actualizado {formatDate(post.data.updatedAt, { day: undefined })}</span>
@@ -82,22 +80,6 @@ const structuredData = {
 
 <style>
   /* Article */
-  .article-categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.45rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .article-categories span {
-    padding: 0.32rem 0.55rem;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    color: var(--muted);
-    font-size: 0.7rem;
-  }
-
   .article-main > h1 {
     margin: 0;
     font-size: clamp(2.4rem, 5vw, 4.8rem);
@@ -113,18 +95,28 @@ const structuredData = {
 
   .article-meta {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
     gap: 0.75rem 1.25rem;
     margin-top: 1.6rem;
+    margin-bottom: 2.5rem;
     color: #858585;
     font-size: 0.76rem;
   }
 
+  .article-meta .article-category {
+    padding: 0.32rem 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.7rem;
+  }
+
+  .article-meta time,
   .article-meta span {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+    white-space: nowrap;
   }
 
   .article-cover {
@@ -165,8 +157,8 @@ const structuredData = {
       text-align: left;
     }
 
-    .article-categories,
     .article-meta {
+      flex-wrap: wrap;
       justify-content: flex-start;
     }
   }

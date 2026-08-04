@@ -6,7 +6,6 @@ updatedAt: '2024-12-04T07:50:11'
 featuredImageAlt: ''
 categories:
   - Guías WordPress
-readingTime: 2
 sourceUrl: https://diegoamorin.com/cambiar-contrasena-wordpress-phpmyadmin/
 ---
 

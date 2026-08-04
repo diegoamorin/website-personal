@@ -7,7 +7,6 @@ featuredImage: ./ElementorTutorial.png
 featuredImageAlt: Navegación Transparente con Elementor
 categories:
   - Guías WordPress
-readingTime: 3
 sourceUrl: https://diegoamorin.com/navegacion-transparente-elementor/
 ---
 

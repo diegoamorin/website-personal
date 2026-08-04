@@ -6,7 +6,6 @@ updatedAt: '2024-02-29T15:04:50'
 featuredImageAlt: ''
 categories:
   - Desarrollo Web
-readingTime: 2
 sourceUrl: https://diegoamorin.com/subdominio-personalizado-netlify/
 ---
 

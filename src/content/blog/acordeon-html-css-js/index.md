@@ -7,7 +7,6 @@ featuredImage: ./Acordeon-con-HTML-y-JS.jpg
 featuredImageAlt: Crea un acordeón con HTML, CSS y Javascript
 categories:
   - Guías HTML, CSS y JS
-readingTime: 7
 sourceUrl: https://diegoamorin.com/acordeon-html-css-js/
 ---
 

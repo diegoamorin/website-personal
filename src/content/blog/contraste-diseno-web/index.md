@@ -7,7 +7,6 @@ featuredImage: ./contraste-diseno-web.png
 featuredImageAlt: 'Contraste en el diseño web: guía la atención de los usuarios'
 categories:
   - UX / UI
-readingTime: 7
 sourceUrl: https://diegoamorin.com/contraste-diseno-web/
 ---
 

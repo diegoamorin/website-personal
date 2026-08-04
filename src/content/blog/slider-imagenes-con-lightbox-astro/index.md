@@ -7,7 +7,6 @@ featuredImage: ./astro-create-slider-lightbox.jpg
 featuredImageAlt: 'Astro: Crea un Slider de imágenes con Lightbox'
 categories:
   - Guías Astro
-readingTime: 11
 sourceUrl: https://diegoamorin.com/slider-imagenes-con-lightbox-astro/
 ---
 

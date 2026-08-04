@@ -7,7 +7,6 @@ featuredImage: ./botones-de-compatir-en-redes-sociales.jpg
 featuredImageAlt: Crear botones para compartir en redes sociales con HTML
 categories:
   - Guías HTML, CSS y JS
-readingTime: 3
 sourceUrl: https://diegoamorin.com/botones-compartir-redes-sociales/
 ---
 

@@ -7,7 +7,6 @@ featuredImage: ./brief-diseno-web.png
 featuredImageAlt: Crea un brief para diseño web (incluye plantillas)
 categories:
   - Diseño Web
-readingTime: 5
 sourceUrl: https://diegoamorin.com/brief-diseno-web/
 ---
 

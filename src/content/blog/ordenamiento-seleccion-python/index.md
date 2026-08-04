@@ -7,7 +7,6 @@ featuredImage: ./ordenamiento-seleccion-python.png
 featuredImageAlt: Ordenamiento por Selección en Python
 categories:
   - Guías Python
-readingTime: 4
 sourceUrl: https://diegoamorin.com/ordenamiento-seleccion-python/
 ---
 

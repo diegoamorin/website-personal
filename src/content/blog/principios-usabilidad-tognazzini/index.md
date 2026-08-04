@@ -7,7 +7,6 @@ featuredImage: ./heuristicas-bruce-tognazzini-1.png
 featuredImageAlt: Heurísticas de Bruce Tognazzini
 categories:
   - UX / UI
-readingTime: 31
 sourceUrl: https://diegoamorin.com/principios-usabilidad-tognazzini/
 ---
 

@@ -7,7 +7,6 @@ featuredImage: ./Django-Signals.png
 featuredImageAlt: Cómo usar Django Signals
 categories:
   - Guías Django
-readingTime: 9
 sourceUrl: https://diegoamorin.com/django-signals/
 ---
 

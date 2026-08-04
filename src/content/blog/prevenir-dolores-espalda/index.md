@@ -7,7 +7,6 @@ featuredImage: ./Programador.jpg
 featuredImageAlt: 6 consejos para prevenir los dolores de espalda (para programadores)
 categories:
   - Mejora Personal
-readingTime: 6
 sourceUrl: https://diegoamorin.com/prevenir-dolores-espalda/
 ---
 

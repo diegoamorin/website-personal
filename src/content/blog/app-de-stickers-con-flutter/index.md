@@ -7,7 +7,6 @@ featuredImage: ./Flutter-Sticker-1-Portada.png
 featuredImageAlt: 'Crea una app de Stickers con Flutter #1'
 categories:
   - Desarrollo Móvil
-readingTime: 6
 sourceUrl: https://diegoamorin.com/app-de-stickers-con-flutter/
 ---
 

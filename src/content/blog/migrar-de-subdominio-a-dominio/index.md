@@ -7,7 +7,6 @@ featuredImage: ./De_Subdominio_a_Dominio.jpg
 featuredImageAlt: Migrar sitio WordPress de subdominio a dominio principal
 categories:
   - Guías WordPress
-readingTime: 5
 sourceUrl: https://diegoamorin.com/migrar-de-subdominio-a-dominio/
 ---
 

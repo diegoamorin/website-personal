@@ -7,7 +7,6 @@ featuredImage: ./Django-Messages-Framework.png
 featuredImageAlt: Cómo usar Django Messages Framework
 categories:
   - Guías Django
-readingTime: 4
 sourceUrl: https://diegoamorin.com/django-messages-framework/
 ---
 

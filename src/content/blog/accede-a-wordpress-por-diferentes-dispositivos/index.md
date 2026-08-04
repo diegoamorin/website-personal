@@ -7,7 +7,6 @@ featuredImage: ./localhost-wordpress-thumb.png
 featuredImageAlt: Accede a tu sitio WordPress local por diferentes dispositivos
 categories:
   - Guías WordPress
-readingTime: 2
 sourceUrl: https://diegoamorin.com/accede-a-wordpress-por-diferentes-dispositivos/
 ---
 

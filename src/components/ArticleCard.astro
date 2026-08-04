@@ -29,7 +29,6 @@ const { post, featured = false } = Astro.props;
   <div class="card-body">
     <div class="card-meta">
       <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
-      <span>{post.data.readingTime} min</span>
     </div>
     <h3><a href={`/${post.id}/`}>{post.data.title}</a></h3>
     <p>{post.data.description}</p>

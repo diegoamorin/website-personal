@@ -7,7 +7,6 @@ featuredImage: ./web-scraping-in-x.jpg
 featuredImageAlt: Cómo hacer Web Scraping con Playwright
 categories:
   - Guías NodeJS
-readingTime: 9
 sourceUrl: https://diegoamorin.com/web-scraping-en-x-nodejs/
 ---
 

@@ -7,7 +7,6 @@ featuredImage: ./opengl-manejo-camara.webp
 featuredImageAlt: Movimiento de cámara en OpenGL (en primera persona)
 categories:
   - Computación gráfica
-readingTime: 10
 sourceUrl: https://diegoamorin.com/movimiento-camara-opengl/
 ---
 

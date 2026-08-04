@@ -7,7 +7,6 @@ featuredImage: ./font-face-custom-fonts.jpg
 featuredImageAlt: Agregar fuentes personalizadas en CSS con @font-face
 categories:
   - Guías HTML, CSS y JS
-readingTime: 6
 sourceUrl: https://diegoamorin.com/agregar-fuentes-en-css-font-face/
 ---
 

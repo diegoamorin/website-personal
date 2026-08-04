@@ -6,7 +6,6 @@ updatedAt: '2024-12-22T15:28:55'
 featuredImageAlt: ''
 categories:
   - Guías HTML, CSS y JS
-readingTime: 3
 sourceUrl: https://diegoamorin.com/inner-outer-javascript/
 ---
 

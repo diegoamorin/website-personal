@@ -7,7 +7,6 @@ featuredImage: ./generate-routes-with-json-astro.jpg
 featuredImageAlt: 'Astro: Genera rutas o páginas con archivos JSON'
 categories:
   - Guías Astro
-readingTime: 9
 sourceUrl: https://diegoamorin.com/astro-rutas-con-archivos-json/
 ---
 

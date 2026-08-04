@@ -6,7 +6,6 @@ updatedAt: '2023-08-10T17:45:48'
 featuredImageAlt: ''
 categories:
   - Guías Django
-readingTime: 2
 sourceUrl: https://diegoamorin.com/context-processors-en-django/
 ---
 

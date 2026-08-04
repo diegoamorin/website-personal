@@ -7,7 +7,6 @@ featuredImage: ./django-variables.png
 featuredImageAlt: Cómo configurar variables de entorno en Django
 categories:
   - Guías Django
-readingTime: 4
 sourceUrl: https://diegoamorin.com/variables-de-entorno-django/
 ---
 

@@ -7,7 +7,6 @@ featuredImage: ./Beneficios-de-una-web-inmobiliaria.png
 featuredImageAlt: Beneficios sitio web inmobiliario
 categories:
   - Definiciones Web
-readingTime: 8
 sourceUrl: https://diegoamorin.com/beneficios-sitio-web-inmobiliario/
 ---
 

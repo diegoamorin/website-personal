@@ -7,7 +7,6 @@ featuredImage: ./Ordenamiento-Burbuja-Tumb.png
 featuredImageAlt: Ordenamiento de Burbuja en Python
 categories:
   - Guías Python
-readingTime: 7
 sourceUrl: https://diegoamorin.com/ordenamiento-burbuja-python/
 ---
 

@@ -7,7 +7,6 @@ featuredImage: ./Importancia-de-la-fisica-fb.png
 featuredImageAlt: La importancia de la física (en la vida, la ingeniería y el emprendimiento)
 categories:
   - Mejora Personal
-readingTime: 15
 sourceUrl: https://diegoamorin.com/importancia-de-la-fisica/
 ---
 

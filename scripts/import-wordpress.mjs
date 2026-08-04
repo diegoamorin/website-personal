@@ -468,7 +468,6 @@ async function writeBlogPost(entry) {
     await downloadTo(media.url, join(directory, name));
     featuredImage = `./${name}`;
   }
-  const words = cleanText(markdown).split(/\s+/).filter(Boolean).length;
   const data = {
     title: cleanText(entry.title.rendered),
     description: cleanText(entry.excerpt.rendered).slice(0, 220),
@@ -477,7 +476,6 @@ async function writeBlogPost(entry) {
     ...(featuredImage ? { featuredImage } : {}),
     featuredImageAlt: media?.alt || '',
     categories: termsFor(entry, 'category'),
-    readingTime: Math.max(1, Math.ceil(words / 220)),
     sourceUrl: entry.link,
   };
   await writeFile(join(directory, 'index.md'), `${frontmatter(data)}${markdown}\n`, 'utf8');

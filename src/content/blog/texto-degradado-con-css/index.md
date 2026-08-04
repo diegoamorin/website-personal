@@ -6,7 +6,6 @@ updatedAt: '2024-12-22T10:42:19'
 featuredImageAlt: ''
 categories:
   - Guías HTML, CSS y JS
-readingTime: 2
 sourceUrl: https://diegoamorin.com/texto-degradado-con-css/
 ---
 

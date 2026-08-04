@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
-import { ArrowLeft, Clock3 } from '@lucide/astro';
+import { ArrowLeft } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import Prose from '../components/Prose.astro';
@@ -58,7 +58,6 @@ const structuredData = {
         <p>{post.data.description}</p>
         <div class="article-meta">
           <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
-          <span><Clock3 size={15} aria-hidden="true" /> {post.data.readingTime} min de lectura</span>
           {post.data.updatedAt > post.data.publishedAt && (
             <span>Actualizado {formatDate(post.data.updatedAt, { day: undefined })}</span>
           )}

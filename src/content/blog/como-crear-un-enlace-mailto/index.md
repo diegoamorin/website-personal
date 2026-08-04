@@ -7,7 +7,6 @@ featuredImage: ./thumbnail-email.jpg
 featuredImageAlt: 'Crea un enlace mailto: que abra tu gestor de correos'
 categories:
   - Guías HTML, CSS y JS
-readingTime: 2
 sourceUrl: https://diegoamorin.com/como-crear-un-enlace-mailto/
 ---
 

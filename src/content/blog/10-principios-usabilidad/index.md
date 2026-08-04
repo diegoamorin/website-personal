@@ -7,7 +7,6 @@ featuredImage: ./heuristicas-de-jakob-nielsen-1.png
 featuredImageAlt: Heurísticas de Jakob Nielsen
 categories:
   - UX / UI
-readingTime: 7
 sourceUrl: https://diegoamorin.com/10-principios-usabilidad/
 ---
 

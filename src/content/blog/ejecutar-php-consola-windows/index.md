@@ -6,7 +6,6 @@ updatedAt: '2023-11-25T15:30:15'
 featuredImageAlt: ''
 categories:
   - Desarrollo Web
-readingTime: 2
 sourceUrl: https://diegoamorin.com/ejecutar-php-consola-windows/
 ---
 

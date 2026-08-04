@@ -7,7 +7,6 @@ featuredImage: ./thumb-cn-tailwind.jpg
 featuredImageAlt: ¿Por qué usar clsx y tailwind-merge junto con Tailwind CSS?
 categories:
   - Guías NextJS
-readingTime: 6
 sourceUrl: https://diegoamorin.com/clsx-tailwind-merge/
 ---
 

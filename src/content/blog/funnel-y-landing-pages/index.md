@@ -7,7 +7,6 @@ featuredImage: ./thumbnail-landingpage-sales-funnel.jpg
 featuredImageAlt: La diferencia entre los Embudos de Ventas y las Landing Pages
 categories:
   - Definiciones Web
-readingTime: 6
 sourceUrl: https://diegoamorin.com/funnel-y-landing-pages/
 ---
 

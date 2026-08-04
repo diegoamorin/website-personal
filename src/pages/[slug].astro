@@ -52,9 +52,9 @@ const structuredData = {
         <h1>{post.data.title}</h1>
         <div class="article-meta">
           {post.data.categories.map((category) => <span class="article-category">{category}</span>)}
-          <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
+          <time datetime={post.data.publishedAt.toISOString()}>Publicado: {formatDate(post.data.publishedAt)}</time>
           {post.data.updatedAt > post.data.publishedAt && (
-            <span>Actualizado {formatDate(post.data.updatedAt, { day: undefined })}</span>
+            <span>Actualizado: {formatDate(post.data.updatedAt)}</span>
           )}
         </div>
 

@@ -79,9 +79,10 @@ const { class: className } = Astro.props;
   }
 
   .prose :global(img:not([data-prose-image='false'])) {
-    width: 100%;
-    height: auto;
+    display: block;
+    width: auto;
     max-width: 100%;
+    height: auto;
     margin: 2rem auto;
     border: 1px solid var(--border);
     border-radius: 9px;

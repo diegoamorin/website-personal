@@ -308,7 +308,7 @@ En esta primera guía:
 
 -   Conoces como se organizan los stickers en WhatsApp.
 -   Tienes claro que existen ciertos requisitos en crear una app o sticker para WhatsApp.
--   Configuraste con éxito el paquete `[flutter_whatsapp_stickers](https://pub.dev/packages/flutter_whatsapp_stickers)` que será el puente entre la app y WhatsApp.
+-   Configuraste con éxito el paquete [flutter_whatsapp_stickers](https://pub.dev/packages/flutter_whatsapp_stickers) que será el puente entre la app y WhatsApp.
 -   Por último, construiste una aplicación que servirá como base para el siguiente capítulo.
 
 ## Conclusión

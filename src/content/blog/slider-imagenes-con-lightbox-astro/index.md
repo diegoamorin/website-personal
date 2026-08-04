@@ -335,4 +335,4 @@ Recuerda que la `url()` debe apuntar a tu recurso svg, en mi caso esta en `publi
 ## Resultado
 
 
-<video class="article-video" controls preload="metadata" src="./Untitled.webm"></video>
+<video class="article-video" controls preload="metadata" src="/videos/astro-slider-example.webm"></video>

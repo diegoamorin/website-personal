@@ -14,7 +14,12 @@ Aprende a crear un acordeón que se expande dinámicamente con el contenido.
 
 Para este caso se realizará una sección «preguntas frecuentes». Puedes seguir esta guía también [en YouTube](https://www.youtube.com/watch?v=wPEb111ypbs).
 
-See the Pen [SHOT – Accordeon HTML, CSS y JS](https://codepen.io/diegoamorin/pen/JjxmyXM) by Diego Amorin ([@diegoamorin](https://codepen.io/diegoamorin)) on [CodePen](https://codepen.io).
+<p class="codepen" data-height="550" data-pen-title="SHOT - Accordeon HTML, CSS y JS" data-default-tab="result" data-slug-hash="JjxmyXM" data-user="diegoamorin" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/diegoamorin/pen/JjxmyXM">
+  SHOT - Accordeon HTML, CSS y JS</a> by Diego Amorin (<a href="https://codepen.io/diegoamorin">@diegoamorin</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
 
 ## Estructura de acordeón
 

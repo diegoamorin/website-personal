@@ -1,0 +1,26 @@
+[
+  {
+    "id": "landing-pages",
+    "name": "Creación de Landing Pages",
+    "icon": "/icons/services/landing-page-black-white.svg",
+    "iconColor": "/icons/services/landing-page-color.svg",
+    "url": "mailto:hola@diegoamorin.com?subject=Creaci%C3%B3n%20de%20Landing%20Page",
+    "enabled": true
+  },
+  {
+    "id": "paginas-corporativas",
+    "name": "Creación de páginas corporativas",
+    "icon": "/icons/services/sitio-informativo-black-white.svg",
+    "iconColor": "/icons/services/sitio-informativo-color.svg",
+    "url": "mailto:hola@diegoamorin.com?subject=Creaci%C3%B3n%20de%20p%C3%A1gina%20corporativa",
+    "enabled": true
+  },
+  {
+    "id": "tiendas-online",
+    "name": "Creación de Tienda Online",
+    "icon": "/icons/services/ecommerce-black-white.svg",
+    "iconColor": "/icons/services/ecommerce-color.svg",
+    "url": "mailto:hola@diegoamorin.com?subject=Creaci%C3%B3n%20de%20Tienda%20Online",
+    "enabled": true
+  }
+]

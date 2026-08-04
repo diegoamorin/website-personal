@@ -2,14 +2,43 @@
 import { ArrowUpRight, ChevronDown, Menu, Package, X } from '@lucide/astro';
 import Logo from '../assets/site/logo.svg';
 import products from '../data/products.json';
+import services from '../data/services.json';
 
 const path = Astro.url.pathname;
-const navItems = [
-  { href: '/', label: 'Inicio', active: path === '/' },
-  { href: '/proyectos/', label: 'Proyectos', active: path.startsWith('/proyecto') },
-  { href: '/blog/', label: 'Blog', active: path === '/blog/' || (!path.startsWith('/proyecto') && path !== '/') },
-];
+const navItems = {
+  start: [
+    { href: '/', label: 'Inicio', active: path === '/' },
+    { href: '/proyectos/', label: 'Proyectos', active: path.startsWith('/proyecto') },
+  ],
+  end: [
+    { href: '/blog/', label: 'Blog', active: path === '/blog/' || (!path.startsWith('/proyecto') && path !== '/') },
+  ],
+};
+
+const externalLinkProps = (url: string) =>
+  /^https?:\/\//i.test(url) ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 ---
+
+<!-- Evita que los triggers se pinten como botones nativos antes de cargar el CSS externo. -->
+<style is:inline>
+  [data-nav-menu-trigger] {
+    appearance: none;
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0;
+    padding-inline: 0.8rem;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #555;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 520;
+  }
+</style>
 
 <header class="site-header" data-site-header>
   <div class="container header-inner">
@@ -18,39 +47,86 @@ const navItems = [
     </a>
 
     <nav class="desktop-nav" aria-label="Navegación principal">
-      {navItems.map((item) => (
+      {navItems.start.map((item) => (
         <a href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>
       ))}
-      <div class="product-menu" data-product-menu>
+
+      <div class="nav-menu" data-nav-menu>
         <button
-          class="product-trigger"
+          class="nav-menu-trigger"
           type="button"
           aria-expanded="false"
-          aria-controls="product-panel"
-          data-product-trigger
+          aria-controls="services-panel"
+          data-nav-menu-trigger
+        >
+          Servicios <ChevronDown size={15} stroke-width={1.8} aria-hidden="true" />
+        </button>
+        <div class="nav-menu-panel" id="services-panel" data-nav-menu-panel hidden>
+          <div class="nav-menu-card">
+            <p class="nav-menu-kicker">Servicios de desarrollo web</p>
+            <ul>
+              {services.map((service) => (
+                <li>
+                  {service.enabled && service.url ? (
+                    <a class="nav-menu-item" href={service.url} {...externalLinkProps(service.url)}>
+                      <span class="nav-menu-icon service-icon">
+                        <img class="service-icon-default" src={service.icon} alt="" width="34" height="34" />
+                        <img class="service-icon-color" src={service.iconColor} alt="" width="34" height="34" />
+                      </span>
+                      <span class="nav-menu-item-copy">{service.name}</span>
+                      <ArrowUpRight size={15} aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <span class="nav-menu-item nav-menu-disabled" aria-disabled="true">
+                      <span class="nav-menu-icon service-icon">
+                        <img src={service.icon} alt="" width="34" height="34" />
+                      </span>
+                      <span class="nav-menu-item-copy">{service.name}<small>Próximamente</small></span>
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {navItems.end.map((item) => (
+        <a href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>
+      ))}
+
+      <div class="nav-menu" data-nav-menu>
+        <button
+          class="nav-menu-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="products-panel"
+          data-nav-menu-trigger
         >
           Productos <ChevronDown size={15} stroke-width={1.8} aria-hidden="true" />
         </button>
-        <div class="product-panel" id="product-panel" data-product-panel hidden>
-          <p class="product-kicker">Productos digitales</p>
-          <ul>
-            {products.map((product) => (
-              <li>
-                {product.enabled && product.url ? (
-                  <a href={product.url}>
-                    <span class="product-icon"><Package size={17} aria-hidden="true" /></span>
-                    <span>{product.name}</span>
-                    <ArrowUpRight size={15} aria-hidden="true" />
-                  </a>
-                ) : (
-                  <span class="product-disabled" aria-disabled="true">
-                    <span class="product-icon"><Package size={17} aria-hidden="true" /></span>
-                    <span>{product.name}<small>Próximamente</small></span>
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
+        <div class="nav-menu-panel" id="products-panel" data-nav-menu-panel hidden>
+          <div class="nav-menu-card">
+            <p class="nav-menu-kicker">Productos digitales</p>
+            <ul>
+              {products.map((product) => (
+                <li>
+                  {product.enabled && product.url ? (
+                    <a class="nav-menu-item" href={product.url} {...externalLinkProps(product.url)}>
+                      <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                      <span class="nav-menu-item-copy">{product.name}</span>
+                      <ArrowUpRight size={15} aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <span class="nav-menu-item nav-menu-disabled" aria-disabled="true">
+                      <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                      <span class="nav-menu-item-copy">{product.name}<small>Próximamente</small></span>
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -70,17 +146,59 @@ const navItems = [
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" data-mobile-nav hidden>
     <div class="container">
-      {navItems.map((item) => (
+      {navItems.start.map((item) => (
+        <a href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>
+      ))}
+      <details>
+        <summary>Servicios <ChevronDown size={16} aria-hidden="true" /></summary>
+        <div class="mobile-menu-items">
+          {services.map((service) =>
+            service.enabled && service.url ? (
+              <a class="mobile-menu-item" href={service.url} {...externalLinkProps(service.url)}>
+                <span class="mobile-menu-item-label">
+                  <span class="service-icon">
+                    <img class="service-icon-default" src={service.icon} alt="" width="34" height="34" />
+                    <img class="service-icon-color" src={service.iconColor} alt="" width="34" height="34" />
+                  </span>
+                  {service.name}
+                </span>
+                <ArrowUpRight size={15} aria-hidden="true" />
+              </a>
+            ) : (
+              <span class="mobile-menu-item mobile-menu-item-disabled" aria-disabled="true">
+                <span class="mobile-menu-item-label">
+                  <span class="service-icon">
+                    <img src={service.icon} alt="" width="34" height="34" />
+                  </span>
+                  <span>{service.name}<small>Próximamente</small></span>
+                </span>
+              </span>
+            ),
+          )}
+        </div>
+      </details>
+      {navItems.end.map((item) => (
         <a href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>
       ))}
       <details>
         <summary>Productos <ChevronDown size={16} aria-hidden="true" /></summary>
-        <div class="mobile-products">
+        <div class="mobile-menu-items">
           {products.map((product) =>
             product.enabled && product.url ? (
-              <a href={product.url}>{product.name}<ArrowUpRight size={15} aria-hidden="true" /></a>
+              <a class="mobile-menu-item" href={product.url} {...externalLinkProps(product.url)}>
+                <span class="mobile-menu-item-label">
+                  <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                  {product.name}
+                </span>
+                <ArrowUpRight size={15} aria-hidden="true" />
+              </a>
             ) : (
-              <span aria-disabled="true">{product.name}<small>Próximamente</small></span>
+              <span class="mobile-menu-item mobile-menu-item-disabled" aria-disabled="true">
+                <span class="mobile-menu-item-label">
+                  <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                  <span>{product.name}<small>Próximamente</small></span>
+                </span>
+              </span>
             ),
           )}
         </div>
@@ -91,27 +209,45 @@ const navItems = [
 
 <script>
   const header = document.querySelector('[data-site-header]');
-  const productMenu = header?.querySelector('[data-product-menu]');
-  const productTrigger = header?.querySelector('[data-product-trigger]');
-  const productPanel = header?.querySelector('[data-product-panel]');
+  const navMenus = [...(header?.querySelectorAll('[data-nav-menu]') ?? [])];
   const mobileToggle = header?.querySelector('[data-mobile-toggle]');
   const mobileNav = header?.querySelector('[data-mobile-nav]');
 
-  const setProductOpen = (open: boolean) => {
-    if (!(productTrigger instanceof HTMLButtonElement) || !(productPanel instanceof HTMLElement)) return;
-    productTrigger.setAttribute('aria-expanded', String(open));
-    productPanel.hidden = !open;
+  const setMenuOpen = (menu: Element, open: boolean) => {
+    const trigger = menu.querySelector('[data-nav-menu-trigger]');
+    const panel = menu.querySelector('[data-nav-menu-panel]');
+    if (!(trigger instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) return;
+    trigger.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
   };
 
-  productTrigger?.addEventListener('click', () => {
-    setProductOpen(productTrigger.getAttribute('aria-expanded') !== 'true');
-  });
-  productMenu?.addEventListener('mouseenter', () => setProductOpen(true));
-  productMenu?.addEventListener('mouseleave', () => setProductOpen(false));
-  productMenu?.addEventListener('focusin', () => setProductOpen(true));
-  productMenu?.addEventListener('focusout', (event) => {
-    const focusEvent = event as FocusEvent;
-    if (!productMenu.contains(focusEvent.relatedTarget as Node | null)) setProductOpen(false);
+  const closeOtherMenus = (currentMenu?: Element) => {
+    navMenus.forEach((menu) => {
+      if (menu !== currentMenu) setMenuOpen(menu, false);
+    });
+  };
+
+  navMenus.forEach((menu) => {
+    const trigger = menu.querySelector('[data-nav-menu-trigger]');
+
+    trigger?.addEventListener('click', () => {
+      const willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+      closeOtherMenus(menu);
+      setMenuOpen(menu, willOpen);
+    });
+    menu.addEventListener('mouseenter', () => {
+      closeOtherMenus(menu);
+      setMenuOpen(menu, true);
+    });
+    menu.addEventListener('mouseleave', () => setMenuOpen(menu, false));
+    menu.addEventListener('focusin', () => {
+      closeOtherMenus(menu);
+      setMenuOpen(menu, true);
+    });
+    menu.addEventListener('focusout', (event) => {
+      const focusEvent = event as FocusEvent;
+      if (!menu.contains(focusEvent.relatedTarget as Node | null)) setMenuOpen(menu, false);
+    });
   });
 
   const setMobileOpen = (open: boolean) => {
@@ -127,14 +263,17 @@ const navItems = [
   });
 
   document.addEventListener('click', (event) => {
-    if (productMenu && !productMenu.contains(event.target as Node)) setProductOpen(false);
+    if (!navMenus.some((menu) => menu.contains(event.target as Node))) closeOtherMenus();
   });
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      setProductOpen(false);
-      setMobileOpen(false);
-      if (productTrigger instanceof HTMLButtonElement) productTrigger.focus();
-    }
+    if (event.key !== 'Escape') return;
+
+    const openTrigger = navMenus
+      .map((menu) => menu.querySelector('[data-nav-menu-trigger]'))
+      .find((trigger) => trigger?.getAttribute('aria-expanded') === 'true');
+    closeOtherMenus();
+    setMobileOpen(false);
+    if (openTrigger instanceof HTMLButtonElement) openTrigger.focus();
   });
 </script>
 
@@ -143,7 +282,6 @@ const navItems = [
     overflow: hidden;
   }
 
-  /* Header */
   .site-header {
     position: sticky;
     z-index: 100;
@@ -181,12 +319,13 @@ const navItems = [
   }
 
   .desktop-nav > a,
-  .product-trigger {
+  .nav-menu-trigger {
     display: inline-flex;
     min-height: 42px;
     align-items: center;
     gap: 0.3rem;
     padding-inline: 0.8rem;
+    appearance: none;
     border: 0;
     border-radius: 7px;
     background: transparent;
@@ -199,29 +338,37 @@ const navItems = [
 
   .desktop-nav > a:hover,
   .desktop-nav > a[aria-current='page'],
-  .product-trigger:hover,
-  .product-trigger[aria-expanded='true'] {
+  .nav-menu-trigger:hover,
+  .nav-menu-trigger[aria-expanded='true'] {
     background: #f4f4f4;
     color: #111;
   }
 
-  .product-menu {
+  .nav-menu {
     position: relative;
   }
 
-  .product-trigger svg {
+  .nav-menu-trigger svg {
     transition: transform 160ms ease;
   }
 
-  .product-trigger[aria-expanded='true'] svg {
+  .nav-menu-trigger[aria-expanded='true'] svg {
     transform: rotate(180deg);
   }
 
-  .product-panel {
+  .nav-menu-panel {
     position: absolute;
-    top: calc(100% + 0.65rem);
+    top: 100%;
     right: 0;
-    width: 290px;
+    width: 330px;
+    padding-top: 0.65rem;
+  }
+
+  .nav-menu-panel[hidden] {
+    display: none;
+  }
+
+  .nav-menu-card {
     padding: 0.65rem;
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -229,11 +376,7 @@ const navItems = [
     box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
   }
 
-  .product-panel[hidden] {
-    display: none;
-  }
-
-  .product-kicker {
+  .nav-menu-kicker {
     margin: 0;
     padding: 0.55rem 0.65rem 0.45rem;
     color: var(--muted);
@@ -243,17 +386,16 @@ const navItems = [
     text-transform: uppercase;
   }
 
-  .product-panel ul {
+  .nav-menu-card ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .product-panel a,
-  .product-disabled {
+  .nav-menu-item {
     display: grid;
-    min-height: 54px;
-    grid-template-columns: 34px 1fr auto;
+    min-height: 58px;
+    grid-template-columns: 40px 1fr auto;
     align-items: center;
     gap: 0.65rem;
     padding: 0.5rem 0.6rem;
@@ -261,29 +403,63 @@ const navItems = [
     font-size: 0.84rem;
   }
 
-  .product-panel a:hover {
+  a.nav-menu-item:hover,
+  a.nav-menu-item:focus-visible {
     background: var(--surface-strong);
   }
 
-  .product-disabled {
+  .nav-menu-item-copy {
+    min-width: 0;
+    line-height: 1.35;
+  }
+
+  .nav-menu-disabled {
     color: #888;
   }
 
-  .product-disabled small,
-  .mobile-products small {
+  .nav-menu-disabled small,
+  .mobile-menu-items small {
     display: block;
     color: #aaa;
     font-size: 0.68rem;
   }
 
-  .product-icon {
+  .nav-menu-icon {
     display: grid;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     place-items: center;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 9px;
     background: #fff;
+  }
+
+  .service-icon {
+    position: relative;
+    display: inline-grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    place-items: center;
+  }
+
+  .service-icon img {
+    position: absolute;
+    inset: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-icon-color {
+    opacity: 0;
+    transition: opacity 160ms ease;
+  }
+
+  a.nav-menu-item:hover .service-icon-color,
+  a.nav-menu-item:focus-visible .service-icon-color,
+  .mobile-menu-item:hover .service-icon-color,
+  .mobile-menu-item:focus-visible .service-icon-color {
+    opacity: 1;
   }
 
   .mobile-toggle {
@@ -328,7 +504,7 @@ const navItems = [
     padding-block: 1rem 3rem;
   }
 
-  .mobile-nav a,
+  .mobile-nav > .container > a,
   .mobile-nav summary {
     display: flex;
     min-height: 58px;
@@ -353,19 +529,29 @@ const navItems = [
     transform: rotate(180deg);
   }
 
-  .mobile-products {
+  .mobile-menu-items {
     padding: 0.5rem 0 0.5rem 1rem;
   }
 
-  .mobile-products a,
-  .mobile-products > span {
+  .mobile-menu-item {
     display: flex;
-    min-height: 54px;
+    min-height: 60px;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     border: 0;
     color: var(--muted);
     font-size: 0.92rem;
+  }
+
+  .mobile-menu-item-disabled {
+    color: #888;
+  }
+
+  .mobile-menu-item-label {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
   }
 
   @media (max-width: 760px) {

@@ -8,6 +8,7 @@ import fallbackImage from '../assets/site/diego-hero.jpg';
 
 interface Props {
   title: string;
+  metaTitle?: string;
   description: string;
   canonicalPath?: string;
   image?: ImageMetadata;
@@ -20,6 +21,7 @@ interface Props {
 
 const {
   title,
+  metaTitle,
   description,
   canonicalPath = Astro.url.pathname,
   image = fallbackImage,
@@ -29,7 +31,7 @@ const {
   updatedAt,
   structuredData,
 } = Astro.props;
-const fullTitle = title === 'Diego Amorin' ? title : `${title} — Diego Amorin`;
+const fullTitle = metaTitle ?? (title === 'Diego Amorin' ? title : `${title} — Diego Amorin`);
 const canonical = new URL(canonicalPath, Astro.site);
 const socialImage = new URL(image.src, Astro.site);
 ---
@@ -42,6 +44,8 @@ const socialImage = new URL(image.src, Astro.site);
     <meta name="generator" content={Astro.generator} />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" type="application/rss+xml" title="Blog de Diego Amorin" href="/rss.xml" />
 

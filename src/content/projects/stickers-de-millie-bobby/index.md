@@ -17,7 +17,6 @@ sourceUrl: https://diegoamorin.com/proyectos/stickers-de-millie-bobby/
 client:
   name: Nombre del cliente
   role: Cargo o empresa
-  testimonial: Añade aquí el testimonio del cliente relacionado con este proyecto.
 ---
 
 Los stickers de Millie cuentan con más de 50,000 descargas en la PlayStore. Inicialmente se planteó hacer una app que albergue miles de stickers, pero al final se pivoto a una app para un nicho de mercado específico, desde ese momento las descargas superaron +150 al día.

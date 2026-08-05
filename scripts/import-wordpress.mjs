@@ -496,7 +496,6 @@ async function writeProject(entry) {
   const client = knownClients[entry.slug] || {
     name: 'Nombre del cliente',
     role: 'Cargo o empresa',
-    testimonial: 'Añade aquí el testimonio del cliente relacionado con este proyecto.',
   };
   let clientImage;
   if (client.imageUrl) {
@@ -522,7 +521,7 @@ async function writeProject(entry) {
       name: client.name,
       role: client.role,
       ...(clientImage ? { image: clientImage } : {}),
-      testimonial: client.testimonial,
+      ...(client.testimonial ? { testimonial: client.testimonial } : {}),
     },
   };
   await writeFile(join(directory, 'index.md'), `${frontmatter(data)}${markdown}\n`, 'utf8');

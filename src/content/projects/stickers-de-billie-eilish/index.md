@@ -16,7 +16,6 @@ sourceUrl: https://diegoamorin.com/proyectos/stickers-de-billie-eilish/
 client:
   name: Nombre del cliente
   role: Cargo o empresa
-  testimonial: Añade aquí el testimonio del cliente relacionado con este proyecto.
 ---
 
 Este proyecto fue un emprendimiento personal, desarrollé una app similar a esta anteriormente y repliqué lo mismo pero para la artista Billie Eilish.

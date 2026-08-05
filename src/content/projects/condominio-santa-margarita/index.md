@@ -17,7 +17,6 @@ sourceUrl: https://diegoamorin.com/proyectos/condominio-santa-margarita/
 client:
   name: Nombre del cliente
   role: Cargo o empresa
-  testimonial: Añade aquí el testimonio del cliente relacionado con este proyecto.
 ---
 
 Una Landing Page creada para el proyecto inmobiliario Santa Margarita. Frank, encargado del proyecto, buscaba una página que filtrara a los curiosos y le permitiera captar únicamente a personas realmente interesadas en adquirir un lote.

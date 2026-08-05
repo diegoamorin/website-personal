@@ -45,7 +45,7 @@ const projects = defineCollection({
         name: z.string(),
         role: z.string(),
         image: image().optional(),
-        testimonial: z.string(),
+        testimonial: z.string().optional(),
       }),
     }),
 });

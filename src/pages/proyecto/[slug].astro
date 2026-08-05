@@ -17,7 +17,7 @@ interface Props {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
+const { testimonial } = project.data.client;
 ---
 
 <BaseLayout
@@ -63,11 +63,11 @@ const hasRealTestimonial = project.data.client.name !== 'Nombre del cliente';
       </div>
     </div>
 
-    {hasRealTestimonial && (
+    {testimonial && (
       <section class="project-testimonial section">
         <div class="container-narrow">
           <p class="eyebrow eyebrow-light">En palabras del cliente</p>
-          <blockquote>“{project.data.client.testimonial}”</blockquote>
+          <blockquote>“{testimonial}”</blockquote>
           <div class="project-client">
             {project.data.client.image && (
               <Image src={project.data.client.image} alt="" width={56} height={56} loading="lazy" />

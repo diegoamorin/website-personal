@@ -17,8 +17,6 @@ sourceUrl: https://diegoamorin.com/proyectos/citigram-landing-pages/
 client:
   name: Luis Pino
   role: Cofundador de Citigram
-  image: ./cliente.png
-  testimonial: Diego es muy profesional, proactivo, ordenado pero sobre todo apasionado. Venimos trabajando un buen tiempo con la creación de nuestra página web, y sinceramente ha sido y sigue siendo una experiencia muy buena, porque vamos logrando los objetivos que nos estamos proponiendo en este aspecto. Lo recomiendo totalmente!
 ---
 
 El equipo de Citigram tenía una propuesta de diseño para crear Landing Pages de venta de propiedades. En este caso, solo me encargué de la programación de estas.

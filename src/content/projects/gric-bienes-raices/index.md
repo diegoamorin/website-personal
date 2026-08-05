@@ -17,7 +17,7 @@ client:
   name: Cristopher Rivas
   role: Agente inmobiliario
   image: ./cliente.jpg
-  testimonial: Contacté a Diego porque quería mejorar completamente mi página web y la experiencia de usuario. Escuchó mis necesidades, se adaptó a Webflow y el resultado ha sido impresionante. Es organizado, diseña y programa muy bien; ha sido una muy buena decisión haberlo contratado.
+  testimonial: Contacté a Diego porque quería mejorar completamente mi página web, que la experiencia de usuario fuera mejor, primero hicimos una videollamada; escucho mis necesidades e ideas, me hizo algunas preguntas, me realizó una cotización muy justa, empezó a trabajar en mi sitio web (se adaptó a Webflow y lo hizo increíblemente) el resultado ha sido impresionante, Diego se ve que es muy organizado, sabe muy bien lo que hace, diseña muy bien, crea código muy bien, le pedí agregar otras cosas y me ayudó con eso, muy recomendable, ha sido una muy buena decisión haber contratado a Diego, si estás buscando un Diseñador Web que tenga todo el conocimiento en construir páginas con la mejor experiencia de usuario, Diego es el indicado 👌.
 ---
 
 GRIC es una agencia especializada en propiedades de lujo en Guadalajara y Riviera Nayarit. Su fundador me dio la oportunidad de construir su plataforma inmobiliaria.

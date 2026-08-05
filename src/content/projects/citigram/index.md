@@ -15,9 +15,10 @@ projectUrl: https://citigram.pe/
 projectUrlStatus: active
 sourceUrl: https://diegoamorin.com/proyectos/citigram/
 client:
-  name: Nombre del cliente
-  role: Cargo o empresa
-  testimonial: Añade aquí el testimonio del cliente relacionado con este proyecto.
+  name: Luis Pino
+  role: Cofundador de Citigram
+  image: ./cliente.png
+  testimonial: Diego es muy profesional, proactivo, ordenado pero sobre todo apasionado. Venimos trabajando un buen tiempo con la creación de nuestra página web, y sinceramente ha sido y sigue siendo una experiencia muy buena, porque vamos logrando los objetivos que nos estamos proponiendo en este aspecto. Lo recomiendo totalmente!
 ---
 
 Citigram.pe es una plataforma que te permite encontrar departamentos y casas en Lima – Perú. Luis Pino, su principal representante, me ofreció la oportunidad de trabajar en la versión inicial de la web.

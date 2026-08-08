@@ -5,6 +5,9 @@ export default defineConfig({
   site: 'https://diegoamorin.com',
   output: 'static',
   trailingSlash: 'always',
+  redirects: {
+    '/real-estate': 'https://realestate.diegoamorin.com',
+  },
   integrations: [sitemap()],
   markdown: {
     shikiConfig: {

@@ -2,6 +2,7 @@
 import '@fontsource-variable/geist';
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
+import Analytics from '@vercel/analytics/astro'
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import fallbackImage from '../assets/site/diego-hero.jpg';
@@ -65,6 +66,7 @@ const socialImage = new URL(image.src, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     {structuredData && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+    <Analytics />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Ir al contenido</a>

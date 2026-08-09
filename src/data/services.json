@@ -13,7 +13,7 @@
     "icon": "/icons/services/sitio-informativo-black-white.svg",
     "iconColor": "/icons/services/sitio-informativo-color.svg",
     "url": "mailto:hola@diegoamorin.com?subject=Creaci%C3%B3n%20de%20p%C3%A1gina%20corporativa",
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "tiendas-online",
@@ -21,6 +21,6 @@
     "icon": "/icons/services/ecommerce-black-white.svg",
     "iconColor": "/icons/services/ecommerce-color.svg",
     "url": "mailto:hola@diegoamorin.com?subject=Creaci%C3%B3n%20de%20Tienda%20Online",
-    "enabled": true
+    "enabled": false
   }
 ]

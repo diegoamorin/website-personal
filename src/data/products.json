@@ -5,19 +5,5 @@
     "icon": "package",
     "url": "",
     "enabled": false
-  },
-  {
-    "id": "producto-2",
-    "name": "Producto 2",
-    "icon": "package",
-    "url": "",
-    "enabled": false
-  },
-  {
-    "id": "producto-3",
-    "name": "Producto 3",
-    "icon": "package",
-    "url": "",
-    "enabled": false
   }
 ]

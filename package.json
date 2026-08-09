@@ -15,11 +15,12 @@
     "@astrojs/rss": "latest",
     "@astrojs/sitemap": "latest",
     "@fontsource-variable/geist": "latest",
+    "@lucide/astro": "latest",
+    "@vercel/analytics": "^2.0.1",
     "astro": "latest",
     "cheerio": "latest",
     "he": "latest",
     "js-yaml": "latest",
-    "@lucide/astro": "latest",
     "sharp": "latest",
     "turndown": "latest",
     "turndown-plugin-gfm": "latest"

@@ -1,5 +1,5 @@
 ---
-import { ArrowUpRight, ChevronDown, Menu, Package, X } from '@lucide/astro';
+import { ArrowUpRight, ChevronDown, Menu, X } from '@lucide/astro';
 import Logo from '../assets/site/logo.svg';
 import products from '../data/products.json';
 import services from '../data/services.json';
@@ -113,13 +113,17 @@ const externalLinkProps = (url: string) =>
                 <li>
                   {product.enabled && product.url ? (
                     <a class="nav-menu-item" href={product.url} {...externalLinkProps(product.url)}>
-                      <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                      <span class="nav-menu-icon">
+                        <img src={product.icon} alt="" width="34" height="34" />
+                      </span>
                       <span class="nav-menu-item-copy">{product.name}</span>
                       <ArrowUpRight size={15} aria-hidden="true" />
                     </a>
                   ) : (
                     <span class="nav-menu-item nav-menu-disabled" aria-disabled="true">
-                      <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                      <span class="nav-menu-icon">
+                        <img src={product.icon} alt="" width="34" height="34" />
+                      </span>
                       <span class="nav-menu-item-copy">{product.name}<small>Próximamente</small></span>
                     </span>
                   )}
@@ -187,7 +191,9 @@ const externalLinkProps = (url: string) =>
             product.enabled && product.url ? (
               <a class="mobile-menu-item" href={product.url} {...externalLinkProps(product.url)}>
                 <span class="mobile-menu-item-label">
-                  <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                  <span class="nav-menu-icon">
+                    <img src={product.icon} alt="" width="34" height="34" />
+                  </span>
                   {product.name}
                 </span>
                 <ArrowUpRight size={15} aria-hidden="true" />
@@ -195,7 +201,9 @@ const externalLinkProps = (url: string) =>
             ) : (
               <span class="mobile-menu-item mobile-menu-item-disabled" aria-disabled="true">
                 <span class="mobile-menu-item-label">
-                  <span class="nav-menu-icon"><Package size={17} aria-hidden="true" /></span>
+                  <span class="nav-menu-icon">
+                    <img src={product.icon} alt="" width="34" height="34" />
+                  </span>
                   <span>{product.name}<small>Próximamente</small></span>
                 </span>
               </span>

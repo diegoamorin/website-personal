@@ -1,9 +1,9 @@
 [
   {
-    "id": "producto-1",
-    "name": "Producto 1",
-    "icon": "package",
-    "url": "",
-    "enabled": false
+    "id": "paltono",
+    "name": "Paltono (pasos de baile)",
+    "icon": "/icons/products/paltono-product.svg",
+    "url": "https://paltono.com",
+    "enabled": true
   }
 ]

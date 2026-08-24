@@ -26,7 +26,7 @@ const projects = sortByPublishedAt(await getCollection('projects'));
   <section class="section listing-section">
     <div class="container">
       <p class="listing-count">{projects.length.toString().padStart(2, '0')} proyectos publicados</p>
-      <div class="project-grid listing-grid">
+      <div class="card-grid listing-grid">
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>
     </div>
@@ -84,12 +84,6 @@ const projects = sortByPublishedAt(await getCollection('projects'));
     text-transform: uppercase;
   }
 
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
-  }
-
   @media (max-width: 760px) {
     .page-hero-grid {
       grid-template-columns: 1fr;
@@ -98,10 +92,6 @@ const projects = sortByPublishedAt(await getCollection('projects'));
 
     .page-hero-grid > p {
       margin: 0;
-    }
-
-    .project-grid {
-      grid-template-columns: 1fr;
     }
   }
 

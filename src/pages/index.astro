@@ -11,7 +11,7 @@ import { brands, testimonials } from '../data/site';
 import { sortByPublishedAt } from '../lib/format';
 
 const posts = sortByPublishedAt(await getCollection('blog')).slice(0, 3);
-const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
+const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 6);
 ---
 
 <BaseLayout
@@ -111,7 +111,7 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
         </div>
         <a class="text-link" href="/proyectos/">Ver todos <ArrowRight size={16} aria-hidden="true" /></a>
       </div>
-      <div class="project-grid home-project-grid">
+      <div class="card-grid home-project-grid">
         {projects.map((project, index) => <ProjectCard project={project} featured={index === 0} />)}
       </div>
     </div>
@@ -151,7 +151,7 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
         </div>
         <a class="text-link" href="/blog/">Ver el blog <ArrowRight size={16} aria-hidden="true" /></a>
       </div>
-      <div class="article-grid">
+      <div class="card-grid">
         {posts.map((post) => <ArticleCard post={post} />)}
       </div>
     </div>
@@ -238,22 +238,6 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
     height: auto;
     filter: saturate(0.82) contrast(1.03);
   }
-
-  /* .hero-caption {
-    position: absolute;
-    right: 0.8rem;
-    bottom: 0.8rem;
-    left: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.7rem 0.85rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.52);
-    color: #fff;
-    font-size: 0.72rem;
-    backdrop-filter: blur(10px);
-  } */
 
   /* Brands */
   .brand-section {
@@ -381,24 +365,6 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
     margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
   }
 
-  .project-grid,
-  .article-grid {
-    display: grid;
-    gap: 1.25rem;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .home-project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .article-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   /* Testimonials */
   .heading-center {
     display: flex;
@@ -506,10 +472,6 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
     .brand-item:nth-child(-n + 3) {
       border-bottom: 1px solid var(--border);
     }
-
-    .article-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
   }
 
   @media (max-width: 760px) {
@@ -567,9 +529,6 @@ const projects = sortByPublishedAt(await getCollection('projects')).slice(0, 4);
       align-items: flex-start;
     }
 
-    .home-project-grid,
-    .project-grid,
-    .article-grid,
     .testimonial-grid {
       grid-template-columns: 1fr;
     }

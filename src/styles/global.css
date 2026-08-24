@@ -114,6 +114,12 @@ a {
   border-top: 1px solid var(--border);
 }
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
 .eyebrow {
   display: flex;
   align-items: center;
@@ -232,6 +238,12 @@ a {
   color: var(--foreground);
 }
 
+@media (max-width: 980px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 760px) {
   :root {
     --header-height: 64px;
@@ -242,6 +254,10 @@ a {
   .container-wide,
   .container-narrow {
     width: min(calc(100% - 2rem), var(--container));
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
   }
 }
 

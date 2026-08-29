@@ -15,8 +15,6 @@
     "@astrojs/sitemap": "latest",
     "@fontsource-variable/geist": "latest",
     "@lucide/astro": "latest",
-    "@vercel/analytics": "^2.0.1",
-    "@vercel/speed-insights": "^2.0.0",
     "astro": "latest",
     "sharp": "latest"
   },

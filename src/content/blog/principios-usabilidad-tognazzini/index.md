@@ -7,7 +7,6 @@ featuredImage: ./heuristicas-bruce-tognazzini-1.png
 featuredImageAlt: Heurísticas de Bruce Tognazzini
 categories:
   - UX / UI
-sourceUrl: https://diegoamorin.com/principios-usabilidad-tognazzini/
 ---
 
 Los siguientes principios te ayudarán a implementar interfaces efectivas, y mejorarás la UI/UX de tus aplicaciones de escritorio, web, celular y cualquier otro dispositivo de Internet.

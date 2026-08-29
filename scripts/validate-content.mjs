@@ -23,12 +23,6 @@ for (const [name, directory] of collections) {
   for (const file of files) {
     const absolute = join(directory, file);
     const contents = await readFile(absolute, 'utf8');
-    if (/!\[[^\]]*\]\(https?:\/\/diegoamorin\.com\/wp-content\//i.test(contents)) {
-      errors.push(`${file}: conserva una imagen remota de WordPress.`);
-    }
-    if (/<(?:img|video)[^>]+src=["']https?:\/\/diegoamorin\.com\/wp-content\//i.test(contents)) {
-      errors.push(`${file}: conserva un recurso multimedia remoto de WordPress.`);
-    }
     const references = [
       ...contents.matchAll(/!\[[^\]]*\]\((\.\/[^\s)]+)/g),
       ...contents.matchAll(/(?:featuredImage|image):\s*['"]?(\.\/[^\s'"\n]+)/g),

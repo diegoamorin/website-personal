@@ -6,7 +6,6 @@ updatedAt: '2023-11-25T15:30:15'
 featuredImageAlt: ''
 categories:
   - Desarrollo Web
-sourceUrl: https://diegoamorin.com/ejecutar-php-consola-windows/
 ---
 
 Personalmente ejecuto archivos de PHP en la consola para probar algunas funciones del lenguaje, o para afinar mis habilidades. Este es el proceso que sigo:

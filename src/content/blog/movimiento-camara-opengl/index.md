@@ -7,7 +7,6 @@ featuredImage: ./opengl-manejo-camara.webp
 featuredImageAlt: Movimiento de cámara en OpenGL (en primera persona)
 categories:
   - Computación gráfica
-sourceUrl: https://diegoamorin.com/movimiento-camara-opengl/
 ---
 
 Tenía que recorrer una escena 3D en «primera persona» para mi proyecto universitario, me tomo 3 días encontrar la forma de lograrlo. Aquí te muestro una de las soluciones.

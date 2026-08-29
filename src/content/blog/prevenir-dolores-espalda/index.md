@@ -7,7 +7,6 @@ featuredImage: ./Programador.jpg
 featuredImageAlt: 6 consejos para prevenir los dolores de espalda (para programadores)
 categories:
   - Mejora Personal
-sourceUrl: https://diegoamorin.com/prevenir-dolores-espalda/
 ---
 
 El problema de nosotros los programadores es que pasamos casi todo el tiempo sentados. Nuestro trabajo es sentado. Para aprender una nueva tecnología, necesitamos estar sentados. No aprendemos [React](https://es.reactjs.org) o [Flutter](https://flutter.dev) desde el celular, ¿no? Y para remate a algunos de nosotros no nos gusta salir a la calle. Preferimos leer un libro en el sofá o jugar videojuegos en el ordenador.

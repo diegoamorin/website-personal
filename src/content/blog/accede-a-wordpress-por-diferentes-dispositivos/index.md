@@ -7,7 +7,6 @@ featuredImage: ./localhost-wordpress-thumb.png
 featuredImageAlt: Accede a tu sitio WordPress local por diferentes dispositivos
 categories:
   - Guías WordPress
-sourceUrl: https://diegoamorin.com/accede-a-wordpress-por-diferentes-dispositivos/
 ---
 
 Cuando creamos un sitio web WordPress de forma local, a veces nos mata la curiosidad de saber como se vería en un celular o tablet real.

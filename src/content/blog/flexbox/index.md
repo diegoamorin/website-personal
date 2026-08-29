@@ -7,7 +7,6 @@ featuredImage: ./flexbox-css-new.png
 featuredImageAlt: Guía completa de Flexbox CSS (Ilustrado)
 categories:
   - Guías HTML, CSS y JS
-sourceUrl: https://diegoamorin.com/flexbox/
 ---
 
 ## Conceptos básicos

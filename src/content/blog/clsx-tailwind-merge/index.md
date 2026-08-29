@@ -7,7 +7,6 @@ featuredImage: ./thumb-cn-tailwind.jpg
 featuredImageAlt: ¿Por qué usar clsx y tailwind-merge junto con Tailwind CSS?
 categories:
   - Guías NextJS
-sourceUrl: https://diegoamorin.com/clsx-tailwind-merge/
 ---
 
 Tailwind CSS tiene muchas ventajas, pero también puede complicarnos cuando intentamos sobrescribir estilos o gestionar clases condicionales demasiado largas. ¿Te ha pasado que tus nuevos estilos no se aplican o que tu clases condicionales se vuelven difíciles de leer? Hoy te enseñaré cómo solucionar estos problemas con dos librerías ligeras.

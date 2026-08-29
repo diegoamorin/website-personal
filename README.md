@@ -1,6 +1,6 @@
 # Web personal de Diego Amorin
 
-Sitio estático construido con Astro, TypeScript, CSS y JavaScript nativos. Los artículos, proyectos e imágenes se guardan localmente y el sitio no depende de WordPress durante la ejecución.
+Sitio estático e independiente construido con Astro, TypeScript, CSS y JavaScript nativos. Los artículos, proyectos e imágenes se administran directamente en este repositorio.
 
 ## Desarrollo
 
@@ -36,18 +36,21 @@ Los servicios se configuran del mismo modo en `src/data/services.json`; `icon` e
 
 Los campos `projectUrl` y `projectUrlStatus` de cada proyecto controlan el botón externo. Usa `active` cuando la URL siga disponible e `inactive` para mostrar el aviso de baja.
 
-## Volver a importar WordPress
+## Deploy en Cloudflare
 
-La importación normal se detiene si ya existen archivos Markdown, para no sobrescribir ediciones manuales:
-
-```bash
-pnpm import:wordpress
-```
-
-Para reemplazar completamente las colecciones locales por una nueva copia de WordPress:
+El sitio se publica como un Worker con recursos estáticos. La configuración está en `wrangler.jsonc`.
 
 ```bash
-pnpm import:wordpress --force
+pnpm install
+pnpm build
+pnpm dlx wrangler@latest deploy
 ```
 
-`--force` elimina únicamente `src/content/blog` y `src/content/projects` antes de reconstruirlos. Guarda cualquier cambio manual antes de utilizarlo.
+Para probar localmente el mismo build antes de publicarlo:
+
+```bash
+pnpm build
+pnpm dlx wrangler@latest dev
+```
+
+Consulta la [guía oficial de Astro para desplegar en Cloudflare](https://docs.astro.build/en/guides/deploy/cloudflare/) para la autenticación inicial, CI/CD y opciones avanzadas.

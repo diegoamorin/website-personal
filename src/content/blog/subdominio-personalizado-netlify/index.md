@@ -6,7 +6,6 @@ updatedAt: '2024-02-29T15:04:50'
 featuredImageAlt: ''
 categories:
   - Desarrollo Web
-sourceUrl: https://diegoamorin.com/subdominio-personalizado-netlify/
 ---
 
 Netlify te provee un subdominio gratuito (`<algo-random>.netlify.app`), pero puedes cambiar esto con tu propio subdominio (`miapp.midominio.com`).

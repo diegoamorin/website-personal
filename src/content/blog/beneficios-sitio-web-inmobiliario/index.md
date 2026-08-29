@@ -7,7 +7,6 @@ featuredImage: ./Beneficios-de-una-web-inmobiliaria.png
 featuredImageAlt: Beneficios sitio web inmobiliario
 categories:
   - Definiciones Web
-sourceUrl: https://diegoamorin.com/beneficios-sitio-web-inmobiliario/
 ---
 
 Los sitios web mejoran la presencia de una marca en Internet, porque son una buena fuente de información para las personas que desean conocer más sobre de ti o sobre tu empresa. Conocerán mas sobre tus servicios, tus propiedades, tu equipo, tu visión, etcétera.

@@ -12,7 +12,6 @@ featuredImage: ./gric-bienes-raices-thumb.jpg
 featuredImageAlt: GRIC Bienes Raíces
 projectUrl: https://www.gricbienesraices.com/
 projectUrlStatus: active
-sourceUrl: https://diegoamorin.com/proyectos/gric-bienes-raices/
 client:
   name: Cristopher Rivas
   role: Agente inmobiliario

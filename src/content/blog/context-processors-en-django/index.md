@@ -6,7 +6,6 @@ updatedAt: '2023-08-10T17:45:48'
 featuredImageAlt: ''
 categories:
   - Guías Django
-sourceUrl: https://diegoamorin.com/context-processors-en-django/
 ---
 
 El contexto es un «conjunto de variables» que envías a tus templates a través de las vistas. Estas variables solo pueden ser accedidas por un template específico. Pero, que sucede si nuestro proyecto requiere variables que estén disponibles en todos los templates. No conviene estar agregando el mismo conjunto de elementos en cada contexto de cada vista. Lo que necesitamos es crear un contexto global, es decir, un conjunto de variables globales que todas las plantillas podrán usar.

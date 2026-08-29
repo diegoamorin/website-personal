@@ -6,7 +6,6 @@ updatedAt: '2024-12-04T07:50:11'
 featuredImageAlt: ''
 categories:
   - Guías WordPress
-sourceUrl: https://diegoamorin.com/cambiar-contrasena-wordpress-phpmyadmin/
 ---
 
 Aprenderás a cambiar la contraseña de una cuenta de WordPress por medio de phpMyAdmin. También veremos la mejor forma de encriptar la contraseña para protegerla de ataques.

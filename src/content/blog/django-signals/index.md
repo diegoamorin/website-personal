@@ -7,7 +7,6 @@ featuredImage: ./Django-Signals.png
 featuredImageAlt: Cómo usar Django Signals
 categories:
   - Guías Django
-sourceUrl: https://diegoamorin.com/django-signals/
 ---
 
 Para aprender a usar las [señales de Django](https://docs.djangoproject.com/en/dev/topics/signals/) primero debemos saber cual es su función, cual es el motivo de su existencia. Por esta razón, tomaré un fragmento de la documentación que va a aclarar algunas de nuestras dudas:

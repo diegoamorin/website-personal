@@ -7,7 +7,6 @@ featuredImage: ./thumbnail-landingpage-sales-funnel.jpg
 featuredImageAlt: La diferencia entre los Embudos de Ventas y las Landing Pages
 categories:
   - Definiciones Web
-sourceUrl: https://diegoamorin.com/funnel-y-landing-pages/
 ---
 
 **La Landing Page es una página web que tiene el objetivo de persuadir a las personas para que realicen una acción. En cambio, el Embudo de Ventas es un proceso que recorre una persona, desde su primer contacto con una marca hasta el cierre de una venta. El Embudo al ser un proceso, se apoya de muchas herramientas y una de ellas son las Landing Pages.**

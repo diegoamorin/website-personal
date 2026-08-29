@@ -7,7 +7,6 @@ featuredImage: ./web-scraping-in-x.jpg
 featuredImageAlt: Cómo hacer Web Scraping con Playwright
 categories:
   - Guías NodeJS
-sourceUrl: https://diegoamorin.com/web-scraping-en-x-nodejs/
 ---
 
 Iniciaremos sesión en X, guardaremos las cookies de inicio de sesión, veremos que hacer si nos saltan captchas, realizaremos búsquedas y extraeremos los tweets usando NodeJS con la librería [Playwright](https://playwright.dev/).

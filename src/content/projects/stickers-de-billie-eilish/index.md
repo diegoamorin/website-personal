@@ -12,7 +12,6 @@ featuredImage: ./thumb-billie-eilish.jpg
 featuredImageAlt: Stickers de Billie Eilish
 projectUrl: https://play.google.com/store/apps/details?id=com.grafipy.billie.billiestickers
 projectUrlStatus: inactive
-sourceUrl: https://diegoamorin.com/proyectos/stickers-de-billie-eilish/
 client:
   name: Nombre del cliente
   role: Cargo o empresa

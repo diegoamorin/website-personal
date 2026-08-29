@@ -7,7 +7,6 @@ featuredImage: ./Django-Messages-Framework.png
 featuredImageAlt: Cómo usar Django Messages Framework
 categories:
   - Guías Django
-sourceUrl: https://diegoamorin.com/django-messages-framework/
 ---
 
 Para mejorar la experiencia de usuario (UX) en nuestra web, debemos mantener a nuestros usuarios informados acerca de lo que esta sucediendo en el sistema. Cuando agregamos, eliminamos o actualizamos un elemento o realizamos alguna otra tarea; el usuario debe saber si la acción se ha realizado con éxito o no.

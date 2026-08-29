@@ -8,7 +8,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "import:wordpress": "node scripts/import-wordpress.mjs",
     "validate:content": "node scripts/validate-content.mjs"
   },
   "dependencies": {
@@ -19,17 +18,11 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "astro": "latest",
-    "cheerio": "latest",
-    "he": "latest",
-    "js-yaml": "latest",
-    "sharp": "latest",
-    "turndown": "latest",
-    "turndown-plugin-gfm": "latest"
+    "sharp": "latest"
   },
   "devDependencies": {
     "@astrojs/check": "latest",
     "@types/node": "latest",
-    "@types/turndown": "latest",
     "typescript": "^5.9.3"
   },
   "pnpm": {

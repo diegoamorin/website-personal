@@ -7,7 +7,6 @@ featuredImage: ./thumbnail-email.jpg
 featuredImageAlt: 'Crea un enlace mailto: que abra tu gestor de correos'
 categories:
   - Guías HTML, CSS y JS
-sourceUrl: https://diegoamorin.com/como-crear-un-enlace-mailto/
 ---
 
 Para crear un enlace o botón que te dirija a un cliente de correo, es recomendable usar un elemento `<a>` y que dirija a un enlace de tipo `mailto:`. Este enlace «mailto» tiene diferentes formatos. Vamos a explorarlos.

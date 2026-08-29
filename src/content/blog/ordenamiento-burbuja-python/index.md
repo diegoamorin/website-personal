@@ -7,7 +7,6 @@ featuredImage: ./Ordenamiento-Burbuja-Tumb.png
 featuredImageAlt: Ordenamiento de Burbuja en Python
 categories:
   - Guías Python
-sourceUrl: https://diegoamorin.com/ordenamiento-burbuja-python/
 ---
 
 El ordenamiento de burbuja es un algoritmo que te permite ordenar valores de un arreglo. Funciona revisando cada elemento con su adyacente. Si ambos elementos no están ordenados, se procede a intercambiarlos, si por el contrario los elementos ya estaban ordenados se dejan tal como estaban. Este proceso sigue para cada elemento del arreglo hasta que quede completamente ordenado.

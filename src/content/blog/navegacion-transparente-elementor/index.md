@@ -7,7 +7,6 @@ featuredImage: ./ElementorTutorial.png
 featuredImageAlt: Navegación Transparente con Elementor
 categories:
   - Guías WordPress
-sourceUrl: https://diegoamorin.com/navegacion-transparente-elementor/
 ---
 
 En esta guía rápida aprenderás como crear una navegación transparente en Elementor y posteriormente verás como cambiar el fondo de la navegación al hacer scroll. Antes de iniciar es recomendable que tengas conocimientos básicos de Elementor y la **[versión PRO](https://trk.elementor.com/amorin)**.

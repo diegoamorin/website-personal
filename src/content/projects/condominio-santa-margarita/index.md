@@ -13,7 +13,6 @@ featuredImage: ./Thumbnail-de-Santa-Margarita.webp
 featuredImageAlt: Condominio Santa Margarita
 projectUrl: https://laspalmerasdelsur.com/santa-margarita/
 projectUrlStatus: active
-sourceUrl: https://diegoamorin.com/proyectos/condominio-santa-margarita/
 client:
   name: Nombre del cliente
   role: Cargo o empresa

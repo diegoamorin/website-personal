@@ -7,7 +7,6 @@ featuredImage: ./brief-diseno-web.png
 featuredImageAlt: Crea un brief para diseño web (incluye plantillas)
 categories:
   - Diseño Web
-sourceUrl: https://diegoamorin.com/brief-diseno-web/
 ---
 
 El *brief* es un documento que nos ayuda a entender la necesidad del cliente y lo que esta buscando. Este documento será necesario que lo redactes antes de iniciar un diseño web.

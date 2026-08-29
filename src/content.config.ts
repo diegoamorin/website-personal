@@ -17,7 +17,6 @@ const blog = defineCollection({
       featuredImage: image().optional(),
       featuredImageAlt: z.string().default(''),
       categories: z.array(z.string()).default([]),
-      sourceUrl: z.url(),
     }),
 });
 
@@ -40,7 +39,6 @@ const projects = defineCollection({
       featuredImageAlt: z.string().default(''),
       projectUrl: z.url().optional(),
       projectUrlStatus: z.enum(['active', 'inactive']),
-      sourceUrl: z.url(),
       client: z.object({
         name: z.string(),
         role: z.string(),

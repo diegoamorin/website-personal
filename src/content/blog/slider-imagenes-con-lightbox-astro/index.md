@@ -7,7 +7,6 @@ featuredImage: ./astro-create-slider-lightbox.jpg
 featuredImageAlt: 'Astro: Crea un Slider de imágenes con Lightbox'
 categories:
   - Guías Astro
-sourceUrl: https://diegoamorin.com/slider-imagenes-con-lightbox-astro/
 ---
 
 Hace unos días necesitaba crear un slider de imágenes con lightbox para una Landing Page con Astro. Encontré 2 librerías de JS que me salvaron la vida y que funcionan muy bien juntas.

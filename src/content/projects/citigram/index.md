@@ -13,7 +13,6 @@ featuredImage: ./thumb-citigram-peru.jpg
 featuredImageAlt: Citigram Perú
 projectUrl: https://citigram.pe/
 projectUrlStatus: active
-sourceUrl: https://diegoamorin.com/proyectos/citigram/
 client:
   name: Luis Pino
   role: Cofundador de Citigram

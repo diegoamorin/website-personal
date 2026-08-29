@@ -7,7 +7,6 @@ featuredImage: ./django-variables.png
 featuredImageAlt: Cómo configurar variables de entorno en Django
 categories:
   - Guías Django
-sourceUrl: https://diegoamorin.com/variables-de-entorno-django/
 ---
 
 Recuerda que cada aplicación web que desarrolles, probablemente se va a ejecutar en mas de un entorno (tanto locales, como en producción). Y necesitarás cambiar algunos parámetros para que funcione correctamente. Por ejemplo, cuando estas desarrollando localmente necesitas que los parámetros de base de datos estén vinculados a la base de datos local y que el `DEBUG` este en `True`. Pero cuando vas a desplegarlo necesitas cambiar, otra vez, estos parámetros. Cambiar el `DEBUG` a `False` y cambiar los valores de la base de datos.

@@ -7,7 +7,6 @@ featuredImage: ./contraste-diseno-web.png
 featuredImageAlt: 'Contraste en el diseño web: guía la atención de los usuarios'
 categories:
   - UX / UI
-sourceUrl: https://diegoamorin.com/contraste-diseno-web/
 ---
 
 En un mundo donde todos luchan por obtener atención, necesitas crear diseños que mantengan a los usuarios pegados a la pantalla. No queremos aburrirlos, y que luego no quieran volver nunca más.

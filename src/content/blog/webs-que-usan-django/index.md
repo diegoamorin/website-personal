@@ -7,7 +7,6 @@ featuredImage: ./webs-creados-con-django.png
 featuredImageAlt: 12 Webs famosas que han sido creadas con Django
 categories:
   - Guías Django
-sourceUrl: https://diegoamorin.com/webs-que-usan-django/
 ---
 
 En este artículo te mostraré las aplicaciones web más populares creadas con el framework Django.

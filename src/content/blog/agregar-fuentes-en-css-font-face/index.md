@@ -7,7 +7,6 @@ featuredImage: ./font-face-custom-fonts.jpg
 featuredImageAlt: Agregar fuentes personalizadas en CSS con @font-face
 categories:
   - Guías HTML, CSS y JS
-sourceUrl: https://diegoamorin.com/agregar-fuentes-en-css-font-face/
 ---
 
 Cuando quieres cambiar la fuente tipográfica de tu sitio web, puedes utilizar todas las fuentes que están instaladas en tu PC. Pruébalo tu mismo, yo tengo instalado la familia de fuentes Poppins y puedo usarla en mi web:

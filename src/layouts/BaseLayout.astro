@@ -67,10 +67,6 @@ const socialImage = new URL(image.src, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     {structuredData && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
-
-    <!-- Vercel dependencies -->
-    <Analytics />
-    <SpeedInsights/>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Ir al contenido</a>

@@ -11,6 +11,7 @@
     "validate:content": "node scripts/validate-content.mjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "^7.0.8",
     "@astrojs/rss": "latest",
     "@astrojs/sitemap": "latest",
     "@fontsource-variable/geist": "latest",

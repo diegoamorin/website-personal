@@ -4,9 +4,9 @@ import { z } from 'astro/zod';
 
 const blog = defineCollection({
   loader: glob({
-    pattern: '**/index.md',
+    pattern: '**/index.{md,mdx}',
     base: './src/content/blog',
-    generateId: ({ entry }) => entry.replace(/\/index\.md$/, ''),
+    generateId: ({ entry }) => entry.replace(/\/index\.(?:md|mdx)$/, ''),
   }),
   schema: ({ image }) =>
     z.object({

@@ -4,6 +4,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import Prose from '../components/Prose.astro';
+import AdInArticle from '../components/AdInArticle.astro';
 import { formatDate } from '../lib/format';
 
 export async function getStaticPaths() {
@@ -71,7 +72,7 @@ const structuredData = {
             </div>
         )}
         <Prose>
-          <Content />
+          <Content components={{ AdInArticle }} />
         </Prose>
       </div>
     </div>

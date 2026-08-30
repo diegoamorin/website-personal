@@ -18,7 +18,7 @@ async function exists(path) {
 }
 
 for (const [name, directory] of collections) {
-  const files = (await readdir(directory, { recursive: true })).filter((file) => file.endsWith('.md'));
+  const files = (await readdir(directory, { recursive: true })).filter((file) => /\.mdx?$/.test(file));
   if (!files.length) errors.push(`${name}: no contiene Markdown.`);
   for (const file of files) {
     const absolute = join(directory, file);
@@ -35,8 +35,8 @@ for (const [name, directory] of collections) {
   }
 }
 
-const blogCount = (await readdir(collections[0][1], { recursive: true })).filter((file) => file.endsWith('.md')).length;
-const projectCount = (await readdir(collections[1][1], { recursive: true })).filter((file) => file.endsWith('.md')).length;
+const blogCount = (await readdir(collections[0][1], { recursive: true })).filter((file) => /\.mdx?$/.test(file)).length;
+const projectCount = (await readdir(collections[1][1], { recursive: true })).filter((file) => /\.mdx?$/.test(file)).length;
 
 if (errors.length) {
   console.error(errors.join('\n'));

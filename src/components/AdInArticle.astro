@@ -1,0 +1,78 @@
+---
+const isDevelopment = import.meta.env.DEV;
+---
+
+{
+  isDevelopment ? (
+    <div class="ad-in-article ad-in-article--placeholder" aria-hidden="true">
+      <span>Ad</span>
+    </div>
+  ) : (
+    <div class="ad-in-article" data-ad-in-article>
+      <ins
+        class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-7427022711461413"
+        data-ad-slot="9531511793"
+      />
+    </div>
+  )
+}
+
+<script>
+  const adUnits = document.querySelectorAll<HTMLElement>(
+    '[data-ad-in-article] .adsbygoogle:not([data-ad-queued])',
+  );
+
+  if (adUnits.length > 0) {
+    const loaderSelector =
+      'script[src^="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]';
+
+    // El loader global de AdSense debe cargarse una sola vez por página. Cada <ins>
+    // se inicializa por separado más abajo con push({}), evitando una descarga por anuncio.
+    if (!document.querySelector(loaderSelector)) {
+      const loader = document.createElement('script');
+      loader.async = true;
+      loader.crossOrigin = 'anonymous';
+      loader.src =
+        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7427022711461413';
+      document.head.append(loader);
+    }
+
+    const adsWindow = window as Window & { adsbygoogle?: Record<string, unknown>[] };
+    adsWindow.adsbygoogle ||= [];
+
+    adUnits.forEach((unit) => {
+      unit.dataset.adQueued = 'true';
+      adsWindow.adsbygoogle?.push({});
+    });
+  }
+</script>
+
+<style>
+  .ad-in-article {
+    width: 100%;
+    min-width: 0;
+    margin-block: clamp(2.25rem, 5vw, 3.25rem);
+  }
+
+  .ad-in-article--placeholder {
+    display: grid;
+    min-height: 96px;
+    place-items: center;
+    border: 1px dashed var(--border);
+    border-radius: 9px;
+    background: var(--surface-strong);
+    color: var(--muted);
+  }
+
+  .ad-in-article--placeholder span {
+    font-size: 0.75rem;
+    font-weight: 620;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+</style>

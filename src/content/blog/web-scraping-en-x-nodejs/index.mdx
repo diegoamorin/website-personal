@@ -41,6 +41,8 @@ Esto solo instala Library. Como último paso accede a tu `package.json` y agrega
 
 Esto nos sirve para usar el `import` y `export` de ECMAScript en nuestros archivos «.js». Ya que por defecto, NodeJS usa CommonJS con la sintaxis `require` y `module.exports` para el manejo de módulos.
 
+<AdInArticle />
+
 ## Ubicar elementos con Playwright
 
 Las funciones que nos permiten ubicar elementos en el DOM son llamados [Locators](http://playwright.dev/docs/locators). Veamos algunos de ellos (solo obsérvalos, en la siguiente sección las usaremos):
@@ -104,6 +106,8 @@ await page.locator('button#edit').dblclick();
 ```
 
 Este será tu kick de herramientas en caso de que alguna clase, elemento o proceso haya cambiado en X. Mira más sobre esto en la [documentación de Locators](https://playwright.dev/docs/locators).
+
+<AdInArticle />
 
 ## Extraer tweets de un usuario
 
@@ -221,9 +225,9 @@ getTweetsByUsername('sama');
 
 Estamos recuperando como mínimo 15 tweets por ejecución, anímate a cambiar el usuario de la función.
 
-<AdInArticle />
-
 Ahora, si queremos recuperar tweets de una búsqueda en X (Twitter), necesitamos iniciar sesión. Vamos a por ello.
+
+<AdInArticle />
 
 ## Iniciar sesión en X
 
@@ -323,6 +327,8 @@ loginInX();
 Iniciaremos sesión nuevamente, pero esta vez guardaremos el contexto del navegador en la ruta `playwright/.auth/user.json`, en tu proyecto verás el nuevo archivo.
 
 No abuses de esta función, suficiente con que haya guardado los datos en el archivo. Ahora, nuestros los siguientes scripts podrán interactuar con X sin límites de autenticación.
+
+<AdInArticle />
 
 ## Extraer tweets de una búsqueda
 

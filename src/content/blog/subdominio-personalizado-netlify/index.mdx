@@ -22,6 +22,8 @@ En mi caso le cambié a [chipichapa.netlify.app](https://youtu.be/PwL29YCgavo?si
 
 ![](./netlify-section-domains.png)
 
+<AdInArticle />
+
 ## Crear subdominio que apunte a proyecto de Netlify
 
 Antes que seguir, necesito que encuentres los **«registros DNS»** de tu proveedor de dominios, porque los paneles de administración son un poco diferentes para cada servicio.
@@ -34,8 +36,6 @@ Una vez que hayas encontrado los registros DNS en tu panel de administración, d
 
 *Estas columnas puedes cambiar de orden dependiendo del servicio.*
 
-<AdInArticle />
-
 En mi caso quiero crear un subdominio llamado `dubidaba.diegoamorin.com` que apunte a `chipichapa.netlify.app`, entonces tengo que agregar el siguiente registro:
 
 <table><tbody><tr><td>Name</td><td>TTL</td><td>Type</td><td>Record</td></tr><tr><td>dubidaba.diegoamorin.com</td><td>14400</td><td>CNAME</td><td>chipichapa.netlify.app</td></tr></tbody></table>
@@ -45,6 +45,8 @@ En mi caso quiero crear un subdominio llamado `dubidaba.diegoamorin.com` que apu
 **Nota 2:** Puede que te hayas encontrado con la opción «crear subdominio» en tu panel de administración, esto también crea un registro DNS, pero este suele apuntar a tu mismo servicio de hosting y no a Netlify. Por ello, no es recomendable para este caso.
 
 **Nota 3:** Si te gustaría aprender un poco más sobre como funciona este registro te recomiendo el tutorial «[Registro DNS CNAME – Crea subdominios de manera correcta](https://www.youtube.com/watch?v=vmLYl9KKo24)«.
+
+<AdInArticle />
 
 ## Agregar el subdominio personalizado a Netlify
 

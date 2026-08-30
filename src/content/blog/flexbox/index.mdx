@@ -22,6 +22,8 @@ Flexbox es un sistema de diseño en CSS que extiende el flujo tradicional de blo
 -   **cross start**: Es el punto de inicio del cross axis.
 -   **cross end**: Es el punto de finalización del cross axis, opuesto al cross start.
 
+<AdInArticle />
+
 ## Propiedades para el contenedor
 
 A continuación, se enumeran todas las propiedades aplicables a un contenedor flex (flex container). Es importante destacar que, salvo `display`, todas las demás propiedades solo funcionan si el contenedor tiene `display` configurado como `flex` o `inline-flex`.
@@ -47,8 +49,6 @@ Esta propiedad define si el contenedor es un contenedor flexible o no. Aunque la
 
 Define la dirección en la que los elementos hijos (flex items) se distribuyen dentro del contenedor flexible. `flex-direction` es sensible a la dirección del texto y al modo de escritura del idioma, lo que afecta cómo se alinean los elementos en el contenedor.
 
-<AdInArticle />
-
 La imagen superior describe la distribución de elementos para contenido que fluye de izquierda a derecha (LTR): textos en inglés, español, francés, etc.
 
 ```css
@@ -61,6 +61,8 @@ La imagen superior describe la distribución de elementos para contenido que flu
 -   `row-reverse`: Los elementos se alinean en una fila, pero en orden invertido, de derecha a izquierda. [Ver accesibilidad](/#problemas-de-accesibilidad).
 -   `column`: Los elementos se alinean en una columna, de arriba a abajo.
 -   `column-reverse`: Los elementos se alinean en una columna, pero en orden invertido, de abajo hacia arriba. [Ver accesibilidad](/#problemas-de-accesibilidad).
+
+<AdInArticle />
 
 ### flex-direction (RTL)
 
@@ -96,6 +98,8 @@ Controla si los elementos hijos (flex items) se ajustan a nuevas líneas dentro 
 -   `wrap`: Los elementos se distribuyen en varias líneas si no caben en una sola línea.
 -   `wrap-reverse`: Los elementos se ajustan a nuevas líneas, pero las líneas adicionales se colocan por encima de la línea anterior, en lugar de debajo. [Ver accesibilidad](/#problemas-de-accesibilidad).
 
+<AdInArticle />
+
 ### flex-flow
 
 Es una propiedad abreviada que combina las propiedades `flex-direction` y `flex-wrap`. Controla la dirección del flujo de los elementos hijos y si deben ajustarse en varias líneas.
@@ -125,6 +129,8 @@ Controla la alineación de los elementos hijos a lo largo del main axis. Determi
 -   `space-around`: Los elementos tienen espacios iguales a su alrededor, lo que significa que los espacios en los bordes son la mitad de los espacios entre elementos.
 -   `space-evenly`: Los elementos tienen espacios iguales tanto entre ellos como en los bordes del contenedor.
 
+<AdInArticle />
+
 ### align-items
 
 ![propiedad align-items de flexbox](./align-items.png)
@@ -151,8 +157,6 @@ Toma en cuenta que esta propiedad alinea los elementos dentro de cada línea del
 
 Controla cómo se distribuyen las líneas dentro del contenedor, a lo largo del cross axis. Esta propiedad solo afecta cuando hay varias líneas de elementos debido al uso de `flex-wrap` configurado como `wrap` o `wrap-reverse`.
 
-<AdInArticle />
-
 **Diferencia con align-items:**
 
 `align-content` distribuye las líneas en el cross axis, mientras que `align-items` distribuye los elementos individuales dentro de cada línea, también en el cross axis.
@@ -170,6 +174,8 @@ Controla cómo se distribuyen las líneas dentro del contenedor, a lo largo del 
 -   `center`: Las líneas se agrupan en el centro del cross axis.
 -   `space-between`: La primera línea se coloca al principio del cross axis y la última al final, con el espacio restante distribuido equitativamente entre las líneas intermedias.
 -   `space-around`: El espacio antes de la primera línea y después de la última línea es la mitad del espacio entre las líneas adyacentes.
+
+<AdInArticle />
 
 ### gap, row-gap, column-gap
 
@@ -207,6 +213,8 @@ Es una propiedad que permite cambiar el orden visual de los elementos dentro de 
 ```
 
 -   `0` (por defecto): Valores positivos o negativos cambian el orden.
+
+<AdInArticle />
 
 ### flex-basis
 
@@ -246,13 +254,13 @@ Asigna una proporción del espacio libre disponible dentro del contenedor a un e
 -   `0` (por defecto): El elemento no crecerá para llenar el espacio libre. Mantendrá su tamaño base.
 -   cualquier número mayor a cero: El elemento crecerá para llenar el espacio libre. El número representa la *proporción* en la que el elemento crecerá en comparación con otros elementos flexibles.
 
+<AdInArticle />
+
 ### flex-shrink
 
 ![propiedad flex-shrink de flexbox](./flex-shrink.png)
 
 La propiedad `flex-shrink` controla cómo se encogen los elementos dentro de un contenedor cuando no hay suficiente espacio disponible. `flex-shrink` determina la cantidad en que cada elemento se reducirá en relación con los demás.
-
-<AdInArticle />
 
 **Nota:** El cálculo exacto de cuánto se encoge cada elemento depende del valor de `flex-shrink` en relación con los demás elementos. Aunque el cálculo puede ser algo complejo, en la práctica, los valores más comunes y predecibles son `1` y `0`.
 
@@ -277,6 +285,8 @@ La propiedad `flex` es una forma abreviada para establecer las propiedades: `fle
   flex: 0 1 auto; /* valor por defecto */
 }
 ```
+
+<AdInArticle />
 
 ### align-self
 

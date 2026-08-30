@@ -60,6 +60,8 @@ En este punto ya no existen intercambios, pero el algoritmo va a recorrer hasta 
 
 Ahora que ya sabemos como funciona el algoritmo de burbuja, pasemos a la práctica. Como les mencioné anteriormente, vamos a implementar el algoritmo original y la variación optimizada de este algoritmo.
 
+<AdInArticle />
+
 ## Implementación en Python
 
 Implementación del algoritmo de burbuja en Python:
@@ -123,11 +125,11 @@ Puedes empezar a comparar esta salida con la explicación que se hizo al inicio 
 
 Espera un momento, aún debemos resolver un problema. Si vuelves arriba y te fijas en la imagen del «Tercer recorrido» notarás que el algoritmo ya verificó que no existen intercambios, eso quiere decir que ya se ha verificado que la lista esta completamente ordenada. Sin embargo, el algoritmo sigue dando un «Cuarto Recorrido» innecesario. ¿Qué hubiera pasado si la lista se hubiera ordenado en el «Primer Recorrido»? Simple, al algoritmo le importaría un comino y se iría de largo hasta el «Cuarto Recorrido». Para resolver este problema, debemos realizar una variante de este algoritmo. Vamos a verlo.
 
+<AdInArticle />
+
 ## Implementación Optimizada
 
 El algoritmo de burbuja tiene un [rendimiento de O(n^2)](https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx). Independientemente de si este o no ordenada la lista, siempre será ese el rendimiento. Por ello, te voy a mostrar una variante optimizada de este algoritmo, que detendrá el bucle si no hubieron intercambios internos.
-
-<AdInArticle />
 
 Puedes crear un archivo aparte o modificar el algoritmo anterior a lo siguiente:
 
@@ -195,6 +197,8 @@ Como salida obtendrás todos los nombres ordenados alfabéticamente:
 ```json
 ['Alvaro', 'Diego', 'Nayeli', 'Raissa', 'Thalia']
 ```
+
+<AdInArticle />
 
 ## Conclusión
 

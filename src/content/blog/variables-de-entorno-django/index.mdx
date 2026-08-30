@@ -35,11 +35,11 @@ En tu archivo `.gitignore` agrega lo siguiente:
 
 Para que nuestra aplicación Django pueda leer los valores del archivo `.env` necesitamos la ayuda de una biblioteca. Veamos la mejor opción entre [python-decouple](https://pypi.org/project/python-decouple/) y [django-environ](https://pypi.org/project/django-environ/).
 
+<AdInArticle />
+
 ## ¿Python Decouple o Django Environ?
 
 Si ya tienes un poco de experiencia en la configuración de variables de entorno en Django, lo mas probable es que hayas usado `django-environ` o `python-decouple`. Ambas bibliotecas te permiten acceder a parámetros desde un archivo `.env`. El problema surge cuando vas a desplegar tu aplicación en algún PaaS como [Heroku](https://www.heroku.com/) que ejecuta los archivos de tu repositorio Git, **y no te permite crear archivos nuevos**. En este caso, el archivo `.env` no nos sirve, simplemente porque no podemos crearlo. Alternativamente habrá que definir las variables de entorno en el sistema. La biblioteca `django-environ` no te permite leer las variables del sistema, solo se limita a archivos. Por este motivo, si queremos adaptar nuestro proyecto a la gran mayoría de entornos, la mejor opción es `python-decouple`, porque leerá el archivo `.env` y las variables de entorno definidas en el sistema.
-
-<AdInArticle />
 
 > Artículo recomendado: [12 sitios webs populares creados con Django](/webs-que-usan-django/)
 
@@ -92,6 +92,8 @@ from decouple import Csv
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 ```
+
+<AdInArticle />
 
 ## Valores por defecto
 

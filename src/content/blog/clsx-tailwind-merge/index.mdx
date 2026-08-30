@@ -57,6 +57,8 @@ Quieres aplicar los estilos `"bg-blue-700 p-2"` a la instancia de `Button`. En e
 
 Como puedes apreciar, las clases se suman a las anteriores. Y es muy probable que el botón no tenga los estilos que se asignaron en la instancia `Button`.
 
+<AdInArticle />
+
 ¿En este tormento de clases quién define que estilos se aplicarán a `<button>`? Pues, dependerá del algoritmo de cascada de CSS:
 
 -   En el archivo .css generado por Tailwind, si `bg-blue-700` se definió primero y después el `bg-red-500`, entonces se ignorará el `bg-blue-700` y el botón se mantendrá en `bg-red-500`.
@@ -103,13 +105,13 @@ export function Button(props: Props) {
 
 Y listo, puedes ver que la instancia `Button` se renderiza con las clases de Tailwind esperadas: `"bg-blue-700 p-2"`.
 
+<AdInArticle />
+
 ## ¿Qué soluciona clsx?
 
 [CLSX](https://www.npmjs.com/package/clsx) resuelve un problema sencillo pero común: Las clases condicionales. Siempre usamos los condicionales de operador ternario o condicionales de operador corto-circuito. Pero analicemos que problemas que nos traen ambos:
 
 No necesitas codificar lo siguiente, solo es una explicación.
-
-<AdInArticle />
 
 **Condicionales con Operador Ternario**
 
@@ -177,6 +179,8 @@ La función analizará si algún valor es *falsy*, y lo quitará. De esta forma,
 
 Te habrás dado cuenta que `bg-blue-700` y `bg-red-500` se juntan en el atributo `class`, cuando `isLoading` es verdadero. ¡Ya sabemos como arreglarlo! Con tailwind-merge. En la siguiente sección las combinaremos.
 
+<AdInArticle />
+
 ## Juntar tailwind-merge y clsx
 
 La función `clsx()` evaluará tus clases condicionales y retornará un string, ese string se lo mandamos a `twMerge()` y en caso de encontrar clases conflictivas, priorizará las últimas:
@@ -237,6 +241,8 @@ export function Button(props: Props) {
 ```
 
 Esta bonito, una sola función que soluciona todo lo mencionado.
+
+<AdInArticle />
 
 ## Resumen para nuevos proyectos
 

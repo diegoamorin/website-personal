@@ -39,6 +39,8 @@ Ahora, todos los scripts que te mostraré en esta guía los trabajarás en tu co
 
 **Nota:** Existen diferentes formas de trabajar con [imágenes en Astro](https://docs.astro.build/es/guides/images/) y varían dependiendo del tipo de proyecto. En este caso lo trabajaremos dentro de la carpeta `public/`
 
+<AdInArticle />
+
 ## Instalación de librerías
 
 No usaremos las CDNs de estas librerías. Es mejor instalarlo mediante NPM, principalmente porque Swiper separa sus funcionalidades en diferentes módulos que puedes importar según lo vas necesitando. Si usas la CDN te cargarás todo el core y todas las funcionalidades independientemente si los usas o no.
@@ -153,11 +155,11 @@ Para nuestro CSS tendríamos lo siguiente:
 
 Y listo, ya tenemos el slider o carrousel de imágenes. ¿Facilísimo verdad?
 
+<AdInArticle />
+
 ## Agregar Lightbox con Photoswipe
 
 Para agregar el Lightbox a nuestro slider, debemos modificar un poco el HTML.
-
-<AdInArticle />
 
 Primero agrega un ID al `div.swiper-wrapper`, porque Photoswipe nos pedirá una referencia hacia nuestras imágenes.
 
@@ -237,6 +239,8 @@ lightbox.init();
 ```
 
 Ya debería estar funcionando, y podrías dejarlo hasta aquí, a menos que quieras hacer responsive este slider y personalizar esas aburridas flechas de Swiper.
+
+<AdInArticle />
 
 ## Hacer responsive nuestro Slider
 
@@ -332,6 +336,8 @@ Pero en caso de que quieras cambiar el icono, también lo realizaremos con CSS, 
 ```
 
 Recuerda que la `url()` debe apuntar a tu recurso svg, en mi caso esta en `public/svgs/` de mi proyecto Astro.
+
+<AdInArticle />
 
 ## Resultado
 

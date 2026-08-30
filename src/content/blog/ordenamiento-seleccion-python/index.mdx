@@ -41,6 +41,8 @@ lista = [1, 2, 3, 4]
 
 Así de sencillo funciona este algoritmo… Ahora analicemos este proceso de manera técnica.
 
+<AdInArticle />
+
 ## ¿Cómo programarlo?
 
 Tienes la siguiente lista «a» con `n=5` elementos:
@@ -52,8 +54,6 @@ a = [22, 25, 12, 64, 11]
 La programación consta de 2 bucles, uno dentro del otro. Llamaré «bucle hijo» al bucle que se encuentra anidado al interior del otro bucle, es decir en el «bucle padre» (Los nombres son referenciales para que me entiendas). El «bucle padre» realizará el `n-1` recorridos, que son las iteraciones necesarias para ordenar la lista, y el “bucle hijo” se encargará de buscar al menor elemento de la lista en cada recorrido de su papá.
 
 Si queremos ordenar la lista «`a`«, el número de recorridos del padre son 4 veces (`n-1`, recuerda). Cabe mencionar que los bucles casi siempre inician desde la posición 0, entonces recorreremos desde el 0 hasta el 3 (0, 1, 2, 3, son igualmente los 4 recorridos que necesitamos).
-
-<AdInArticle />
 
 Analicemos el proceso gráficamente. El bucle padre tendrá índice «`i`» y el bucle hijo índice «`j`«. Y el posible menor de la lista será resaltado en amarillo. Veamos el primer recorrido:
 
@@ -76,6 +76,8 @@ Analicemos el proceso gráficamente. El bucle padre tendrá índice «`i`» y el
 **Cuarto recorrido del bucle padre** `**i=**`**`3`:** El menor inicia siendo 64 e inmediatamente se haya el 25 en posición 4. Intercambiamos la posición 4 con la posición `i=3` del padre.
 
 Si te fijas atentamente, en cada recorrido resaltaba solo un nuevo elemento de color celeste. Sin embargo, en el último recorrido (que es el cuarto) resaltamos los 2 últimos, porque si solo pintamos un elemento, nos quedaría solo el 64. Este elemento se asume que es el mayor y el último de la lista; por ello evitamos el «quinto recorrido» y solo recorremos `n-1` veces.
+
+<AdInArticle />
 
 ## Implementación en Python
 

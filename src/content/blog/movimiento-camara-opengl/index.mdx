@@ -21,6 +21,8 @@ Para posicionar y fijar donde mira la cámara necesitamos la función `gluLookAt
 
 Entonces, para desplazar la cámara necesitamos mover el punto «eye», y para controlar donde mira la cámara debemos mover el punto «center».
 
+<AdInArticle />
+
 ## Mover los puntos
 
 Mover el punto «eye» es más sencillo, es similar a caminar. Podemos avanzar, retroceder, ir a la izquierda, ir a la derecha.
@@ -39,11 +41,11 @@ El detalle es que las coordenadas polares solo nos permiten girar a la izquierda
 
 ¿Y cómo podemos hacer para que el punto «center» recorra una trayectoria esférica?
 
-<AdInArticle />
-
 En matemáticas esto se conoce como «coordenadas esféricas» que incluyen el (radio, angulo1, angulo2) y justamente esto es lo que usaremos en nuestro programa.
 
 **Nota:** Las coordenadas esféricas es una de las opciones que puedes seguir, aunque investigando un poco me tope con un término llamado «[bloqueo de cardán](https://www.youtube.com/watch?v=zc8b2Jo7mno&ab_channel=GuerrillaCG)» que puede suceder cuando aplicamos esta forma de rotación. Ojo, no lo ahonde mucho. También existe otra alternativa a las coordenadas esféricas, llamadas [Cuaterniones](https://www.youtube.com/watch?v=zjMuIxRvygQ&ab_channel=3Blue1Brown).
+
+<AdInArticle />
 
 ## Todo se reduce a una conversión
 
@@ -158,6 +160,8 @@ int main(int argc, char** argv) {
 
 Una vez lo hayas copiado asegúrate de que se ejecute correctamente. Si tienes conocimientos base de OpenGL te recomiendo tratar de entender el código. Así será pan comido entender lo que sigue.
 
+<AdInArticle />
+
 ## Rotar la cámara en OpenGL
 
 Nos enfocaremos en mover esféricamente el punto «center» para girar la cámara. Primero, definimos las variables y constantes que necesitaremos. Agrega lo siguiente en la parte superior, antes de la función `ventana_escalable()`:
@@ -214,8 +218,6 @@ Agregamos el `gluLookAt` aquí para que se llame cada vez que cambien las variab
 
 Finalmente debemos «oír» cuando las flechas (arriba, abajo, izquierda y derecha) se presionan, y así, aumentar o disminuir los valores del `angulo_theta` y el `angulo_phi` que provocará el movimiento del punto «center».
 
-<AdInArticle />
-
 Copia lo siguiente y pegalo antes de la función `main()`:
 
 ```cpp
@@ -259,6 +261,8 @@ void teclado_girar_camara(int key, int x, int y) {
 La variable `saltos` contiene el valor en radianes que queremos aumentar o quitar a los angulos phi y theta.
 
 Ahí también puse un límite al momento de girar verticalmente: Si `angulo_phi` es menor o igual a 0 radianes entonces le agregamos ese salto que le quitamos anteriormente, para que se quede estático; lo mismo al otro, si es mayor o igual a 3 radianes entonces le quitamos ese salto que le aumentamos, para que también se queda estático.
+
+<AdInArticle />
 
 Luego convertimos las coordenadas esféricas (con los 2 ángulos y radio) a coordenadas rectangulares que serán asignadas al `gluLookAt()` cuando se redibuje la ventana gracias al `glutPostRedisplay()`.
 
@@ -353,6 +357,8 @@ glutKeyboardFunc(teclado_mover_camara);
 ```
 
 Y ya estaría, lo lograste. Todo el código esta comentado como puedes ver, puedes tomarte tu tiempo para comprenderlo.
+
+<AdInArticle />
 
 ## Resultado
 

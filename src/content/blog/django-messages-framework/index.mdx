@@ -38,6 +38,8 @@ Y en tu variable `TEMPLATES` en la lista `context_processors` agregar la siguien
 "django.contrib.messages.context_processors.messages"
 ```
 
+<AdInArticle />
+
 ## Nivel de Mensajes
 
 Los niveles de mensajes nos permiten agrupar mensajes por su tipo y posteriormente filtrarlos o mostrarlos de manera diferente en las vistas o plantillas. Por ejemplo, podemos mostrar el `ERROR` de color rojo y el `SUCCESS` de color verde.
@@ -51,8 +53,6 @@ A continuación tienes una tabla con todos los niveles de mensaje y sus respecti
 | SUCCESS | 25 | success | Una acción fue exitosa, por ejemplo, «Su perfil se actualizó con éxito» |
 | WARNING | 30 | warning | No ocurrió una falla pero puede ser más adelante |
 | ERROR | 40 | error | Una acción no tuvo éxito o se produjo algún otro error |
-
-<AdInArticle />
 
 Por defecto, Django muestra niveles desde 20 a mas. Es decir, todos menos DEBUG. En caso de que quieras cambiar este comportamiento, puedes abrir tu archivo `settings.py` y agregar lo siguiente:
 
@@ -100,6 +100,8 @@ def producto_add(request):
 
     return render(request, "pos/producto_add.html", {"form": form})
 ```
+
+<AdInArticle />
 
 ## Muestra el mensaje
 
@@ -171,6 +173,8 @@ En mi caso tengo una salida como la siguiente:
 ![](./success_message.png)
 
 Si agregas otro tipo de mensaje como `WARNING` tendrás un mensaje color amarillo gracias a Bootstrap.
+
+<AdInArticle />
 
 ## Mensajes Personalizados
 

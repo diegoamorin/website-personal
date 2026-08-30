@@ -29,8 +29,6 @@ Los colores que tomará el texto son los colores que cubre el texto (léelo de n
 
 Ocurre 2 problemas cuando un degradado va de forma horizontal y el fondo abarca el 100% de ancho. Primero que el texto es muy pequeño y no esta cubriendo los los 3 colores del degradado. Segundo, si redimensionas la pantalla, el degradado se moverá y cambiarán los colores que cubre el texto. Por ello, es necesario agregar `inline-block`, para que el fondo encaje con el texto. Esto no será necesario en etiquetas que no abarcan el ancho completo como el `span` y degradados que son verticales.
 
-<AdInArticle />
-
 ```css
 h1 {
   font-size: 100px;
